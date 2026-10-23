@@ -1,0 +1,261 @@
+# Format : standard | Gen Z ; phrases synthétiques, pas des citations.
+[etudes]
+Je ne comprends pas cet exercice. | Je capte pas cet exo.
+Ce cours est vraiment intéressant. | Ce cours est trop intéressant.
+Je suis en retard pour le cours. | Je suis à la bourre pour le cours.
+J'ai réussi mon examen. | J'ai validé mon exam.
+Je dois réviser ce soir. | Faut que je révise ce soir.
+Cette consigne est très confuse. | Cette consigne est hyper floue.
+Le professeur explique très bien. | Le prof explique super bien.
+J'ai oublié mon cahier. | J'ai zappé mon cahier.
+Je n'ai pas terminé mon devoir. | J'ai pas fini mon devoir.
+Notre présentation était excellente. | Notre présentation était une dinguerie.
+Je suis stressé pour l'oral. | Je stresse trop pour l'oral.
+Je peux t'aider à réviser. | Je peux t'aider à bosser tes révisions.
+La bibliothèque est déjà pleine. | La bibliothèque est déjà blindée.
+Ce chapitre est difficile. | Ce chapitre est chaud.
+J'ai enfin compris la méthode. | J'ai enfin capté la méthode.
+Je n'ai pas envie de tricher. | J'ai pas envie de tricher.
+Le travail de groupe avance bien. | Le travail de groupe avance nickel.
+J'ai besoin d'une pause. | Il me faut une pause.
+Ce résultat me surprend. | Ce résultat me surprend de ouf.
+Nous avons rendu le projet à temps. | On a rendu le projet dans les temps.
+Je préfère travailler au calme. | Je préfère bosser au calme.
+La correction n'est pas disponible. | La correction est pas dispo.
+J'ai perdu mes notes. | J'ai paumé mes notes.
+Le prochain contrôle me fait peur. | Le prochain contrôle me fait flipper.
+Je suis fier de mes progrès. | Je suis fier de mes progrès, vraiment.
+[travail]
+Cette réunion est trop longue. | Cette réunion dure une éternité.
+Je travaille de chez moi. | Je bosse de chez moi.
+Je n'ai pas reçu ton message. | J'ai pas reçu ton message.
+Le projet prend du retard. | Le projet est à la bourre.
+Je suis disponible cet après-midi. | Je suis dispo cet après-midi.
+Cette idée est excellente. | Cette idée est une pépite.
+Je ne suis pas d'accord. | Je suis pas d'accord.
+Nous devons clarifier les priorités. | Faut qu'on mette les priorités au clair.
+Le client a changé d'avis. | Le client a changé d'avis.
+J'ai terminé ma tâche. | J'ai fini mon boulot.
+Cette journée était épuisante. | Cette journée m'a vidé.
+Je cherche un stage. | Je cherche un stage.
+Mon entretien s'est bien passé. | Mon entretien s'est super bien passé.
+Je n'ose pas poser la question. | J'ose pas poser la question.
+Nous avons trouvé une solution. | On a trouvé une solution.
+Cette tâche est urgente. | Cette tâche est super urgente.
+Je vais vérifier le document. | Je vais checker le document.
+Tu peux compter sur moi. | Tu peux compter sur moi.
+Je préfère prévenir mon équipe. | Je préfère prévenir mon équipe.
+Cette remarque m'a vexé. | Cette remarque m'a mis mal.
+Le planning est très chargé. | Le planning est blindé.
+Je n'ai pas assez de temps. | J'ai pas assez de temps.
+Ce travail me plaît vraiment. | Ce boulot me plaît grave.
+Il faut corriger cette erreur. | Faut corriger cette erreur.
+Notre équipe est très motivée. | Notre équipe est à fond.
+[sorties]
+Je ne viendrai pas à la fête. | Je viendrai pas à la soirée.
+Cette soirée était incroyable. | Cette soirée était une dinguerie.
+Le concert commence à 20 heures. | Le concert commence à 20 h.
+Nous nous retrouvons devant le cinéma. | On se retrouve devant le ciné.
+Je préfère rentrer maintenant. | Je préfère rentrer là.
+Le restaurant est complet. | Le resto est complet.
+Je n'ai pas réservé de table. | J'ai pas réservé de table.
+Cette exposition vaut le détour. | Cette expo vaut grave le détour.
+Je suis partant pour une promenade. | Je suis chaud pour une balade.
+Je n'ai pas envie de sortir. | J'ai pas envie de sortir.
+La file d'attente est très longue. | La queue est interminable.
+Nous avons raté le début. | On a loupé le début.
+Cet endroit est très agréable. | Cet endroit est trop sympa.
+Je vais proposer une autre date. | Je vais proposer une autre date.
+Les billets sont trop chers. | Les billets coûtent beaucoup trop cher.
+Je garde une place pour toi. | Je te garde une place.
+La musique est trop forte. | La musique est beaucoup trop forte.
+Je ne connais personne ici. | Je connais personne ici.
+Nous avons passé un bon moment. | On a passé un super moment.
+La fête est annulée. | La soirée est annulée.
+Je suis déjà devant l'entrée. | Je suis déjà devant l'entrée.
+Je préfère une soirée tranquille. | Je préfère une soirée chill.
+Ce café ferme tôt. | Ce café ferme super tôt.
+Je ne veux pas rentrer seul. | Je veux pas rentrer solo.
+Le spectacle m'a beaucoup plu. | J'ai grave aimé le spectacle.
+[emotions]
+Je suis vraiment déçu. | J'ai trop le seum.
+Je suis très heureux. | Je suis trop content.
+Cette nouvelle me rassure. | Cette nouvelle me rassure trop.
+Je n'arrive pas à me détendre. | J'arrive pas à me poser.
+Je me sens seul. | Je me sens solo.
+J'ai peur de me tromper. | J'ai peur de me planter.
+Je suis fier de toi. | Je suis trop fier de toi.
+Cette situation me gêne. | Cette situation me met mal à l'aise.
+Je ne suis pas en colère. | Je suis pas en colère.
+J'ai du mal à y croire. | J'ai du mal à y croire, sérieux.
+Je suis très fatigué. | Je suis claqué.
+Cette attente me rend impatient. | Cette attente me rend trop impatient.
+Je suis soulagé que ce soit fini. | Je suis soulagé que ce soit fini.
+Je me sens dépassé. | Je suis dépassé par tout ça.
+Je n'ai pas le moral. | J'ai pas le moral.
+Cette surprise m'a touché. | Cette surprise m'a grave touché.
+J'ai besoin de parler. | Faut que je parle.
+Je ne sais pas quoi ressentir. | Je sais pas quoi ressentir.
+Je suis très enthousiaste. | Je suis trop hypé.
+Je préfère rester seul un moment. | Je préfère rester solo un moment.
+Je regrette ma réaction. | Je regrette ma réaction.
+Je me sens mieux maintenant. | Ça va mieux maintenant.
+Je suis inquiet pour demain. | Je stresse pour demain.
+Cette discussion m'a fait du bien. | Cette discussion m'a fait trop de bien.
+Je n'ai plus confiance. | J'ai plus confiance.
+[numerique]
+Mon téléphone n'a plus de batterie. | Mon téléphone a plus de batterie.
+Cette application ne fonctionne pas. | Cette appli marche pas.
+Je ne trouve pas le fichier. | Je trouve pas le fichier.
+La connexion est très lente. | La connexion rame de ouf.
+J'ai oublié mon mot de passe. | J'ai zappé mon mot de passe.
+Je vais partager le lien. | Je vais envoyer le lien.
+Cette vidéo est très drôle. | Cette vidéo est trop drôle.
+Je ne veux pas publier cette photo. | Je veux pas poster cette photo.
+Mon ordinateur vient de se bloquer. | Mon ordi vient de planter.
+Il faut sauvegarder le document. | Faut sauvegarder le document.
+Je préfère désactiver les notifications. | Je préfère couper les notifs.
+Ce message semble suspect. | Ce message a l'air louche.
+Je n'ai pas installé la mise à jour. | J'ai pas installé la mise à jour.
+Cette photo est floue. | Cette photo est toute floue.
+Le téléchargement est terminé. | Le téléchargement est fini.
+Je ne partage pas mes données personnelles. | Je partage pas mes données perso.
+Je vais répondre plus tard. | Je vais répondre plus tard.
+Le son ne fonctionne plus. | Le son marche plus.
+Cette interface est très claire. | Cette interface est super claire.
+Je passe trop de temps en ligne. | Je passe trop de temps sur internet.
+La recherche n'a rien donné. | La recherche a rien donné.
+Je ne reconnais pas ce compte. | Je reconnais pas ce compte.
+Mon écran est cassé. | Mon écran est éclaté.
+Ce tutoriel est utile. | Ce tuto est bien utile.
+J'ai fermé l'onglet par erreur. | J'ai fermé l'onglet sans faire exprès.
+[transport]
+Le bus est encore en retard. | Le bus est encore à la bourre.
+J'ai raté mon train. | J'ai loupé mon train.
+Je préfère marcher. | Je préfère y aller à pied.
+Le métro est bondé. | Le métro est blindé.
+Je n'ai pas de ticket. | J'ai pas de ticket.
+Le trajet dure 30 minutes. | Le trajet dure 30 minutes.
+Nous sommes arrivés à Lyon. | On est arrivés à Lyon.
+Je me suis trompé de quai. | Je me suis planté de quai.
+La circulation est difficile. | Ça bouchonne grave.
+Je vais prendre mon vélo. | Je vais prendre mon vélo.
+Le dernier bus est déjà parti. | Le dernier bus est déjà parti.
+Je ne connais pas le chemin. | Je connais pas le chemin.
+Le billet coûte 15 euros. | Le billet coûte 15 euros.
+La gare est en travaux. | La gare est en travaux.
+Je dois changer de ligne. | Faut que je change de ligne.
+Ce trajet est épuisant. | Ce trajet me crève.
+Je suis presque arrivé. | J'arrive bientôt.
+Je ne veux pas conduire ce soir. | Je veux pas conduire ce soir.
+Le parking est plein. | Le parking est blindé.
+Je vais vérifier les horaires. | Je vais checker les horaires.
+Nous avons oublié notre arrêt. | On a zappé notre arrêt.
+Le retour sera plus court. | Le retour sera plus court.
+Je ne trouve pas mon vélo. | Je trouve pas mon vélo.
+Ce détour est inutile. | Ce détour sert à rien.
+Je pars avec assez d'avance. | Je pars avec de la marge.
+[quotidien]
+J'ai oublié mes clés. | J'ai zappé mes clés.
+Je dois faire les courses. | Faut que je fasse les courses.
+Le réfrigérateur est vide. | Le frigo est vide.
+Je n'ai plus de café. | J'ai plus de café.
+Cette recette est facile. | Cette recette est super simple.
+J'ai brûlé le repas. | J'ai cramé le repas.
+Je vais ranger ma chambre. | Je vais ranger ma chambre.
+Il pleut beaucoup. | Il pleut de ouf.
+Je n'ai pas assez dormi. | J'ai pas assez dormi.
+Ce repas est délicieux. | Ce repas est une dinguerie.
+Je préfère cuisiner chez moi. | Je préfère cuisiner chez moi.
+La vaisselle peut attendre. | La vaisselle peut attendre.
+Je n'ai pas entendu le réveil. | J'ai pas entendu le réveil.
+Il fait trop chaud ici. | Il fait beaucoup trop chaud ici.
+J'ai retrouvé mon portefeuille. | J'ai retrouvé mon portefeuille.
+Cette veste me va bien. | Cette veste me va trop bien.
+Je n'ai rien prévu ce week-end. | J'ai rien prévu ce week-end.
+Je dois sortir les poubelles. | Faut que je sorte les poubelles.
+Ce canapé est confortable. | Ce canapé est trop confortable.
+La machine fait un bruit étrange. | La machine fait un bruit bizarre.
+Je n'ai pas faim. | J'ai pas faim.
+Le magasin ferme à 19 heures. | Le magasin ferme à 19 h.
+Je vais préparer le dîner. | Je vais préparer à manger.
+J'ai besoin de calme. | Il me faut du calme.
+Cette journée est passée vite. | Cette journée est passée super vite.
+[relations]
+Merci pour ton aide. | Merci pour le coup de main.
+Je n'ai pas compris ta blague. | J'ai pas capté ta blague.
+Tu me manques. | Tu me manques.
+Je préfère en parler en personne. | Je préfère en parler en vrai.
+Cette remarque était maladroite. | Cette remarque était pas très adroite.
+Je ne veux pas te déranger. | Je veux pas te déranger.
+Je suis heureux de te revoir. | Ça me fait trop plaisir de te revoir.
+Nous nous sommes mal compris. | On s'est mal compris.
+J'ai oublié de te rappeler. | J'ai zappé de te rappeler.
+Je ne veux pas me disputer. | Je veux pas qu'on se prenne la tête.
+Tu as bien fait de demander. | T'as bien fait de demander.
+Je respecte ton choix. | Je respecte ton choix.
+Je ne peux pas venir t'aider. | Je peux pas venir t'aider.
+Cette attention me fait plaisir. | Cette attention me fait trop plaisir.
+Je préfère être honnête avec toi. | Je préfère être honnête avec toi.
+Nous avons beaucoup ri. | On a trop rigolé.
+Je n'aime pas cette plaisanterie. | J'aime pas cette blague.
+Je suis là si tu veux parler. | Je suis là si tu veux parler.
+Tu peux me donner ton avis. | Tu peux me dire ce que t'en penses.
+Je ne te juge pas. | Je te juge pas.
+Notre discussion était importante. | Notre discussion comptait vraiment.
+Je vais prendre de tes nouvelles. | Je vais te demander comment ça va.
+Je ne connais pas encore Emma. | Je connais pas encore Emma.
+Nous avons trouvé un compromis. | On a trouvé un compromis.
+Je suis désolé pour le retard. | Désolé pour le retard.
+[loisirs]
+Ce film est vraiment excellent. | Ce film est une dinguerie.
+Je n'ai pas aimé la fin. | J'ai pas aimé la fin.
+Cette série est décevante. | Cette série me déçoit grave.
+Je vais lire un peu. | Je vais lire un peu.
+Ce morceau me plaît beaucoup. | Ce morceau me plaît grave.
+Je n'arrive pas à passer ce niveau. | J'arrive pas à passer ce niveau.
+Nous avons gagné la partie. | On a gagné la partie.
+Ce jeu est difficile. | Ce jeu est chaud.
+Je préfère jouer avec mes amis. | Je préfère jouer avec mes potes.
+La fin était prévisible. | La fin se voyait venir.
+Ce livre est passionnant. | Ce livre est trop prenant.
+Je n'ai pas vu la bande-annonce. | J'ai pas vu la bande-annonce.
+Le personnage principal est attachant. | Le perso principal est trop attachant.
+Cette chanson reste dans la tête. | Cette chanson reste trop dans la tête.
+Je vais essayer le dessin. | Je vais tester le dessin.
+Notre équipe a perdu le match. | Notre équipe a perdu le match.
+Je ne joue plus à ce jeu. | Je joue plus à ce jeu.
+Le rythme du film est trop lent. | Le film avance trop lentement.
+Cette scène m'a surpris. | Cette scène m'a trop surpris.
+Je préfère la version originale. | Je préfère la VO.
+Je n'ai pas envie de regarder la suite. | J'ai pas envie de regarder la suite.
+Le concert était émouvant. | Le concert m'a grave ému.
+Je découvre ce groupe. | Je découvre ce groupe.
+Ce loisir me détend. | Ce loisir me fait décompresser.
+J'ai envie d'apprendre la guitare. | J'ai envie de me mettre à la guitare.
+[projets]
+Je veux apprendre à programmer. | Je veux apprendre à coder.
+Ce projet me motive beaucoup. | Ce projet me motive grave.
+Je ne sais pas par où commencer. | Je sais pas par où commencer.
+Nous allons essayer une autre méthode. | On va tester une autre méthode.
+J'ai enfin osé me lancer. | J'ai enfin osé me lancer.
+Je préfère avancer progressivement. | Je préfère avancer petit à petit.
+Ce plan est trop compliqué. | Ce plan est trop prise de tête.
+Je ne veux pas abandonner. | Je veux pas lâcher.
+Nous avons besoin de plus de temps. | On a besoin de plus de temps.
+Cette solution me semble réaliste. | Cette solution me semble faisable.
+J'ai changé mes priorités. | J'ai changé mes priorités.
+Je ne peux pas tout faire seul. | Je peux pas tout faire solo.
+Le résultat dépasse mes attentes. | Le résultat est encore mieux que prévu.
+Je vais demander conseil. | Je vais demander des conseils.
+Cette première étape est encourageante. | Cette première étape donne envie de continuer.
+Je n'ai pas encore choisi. | J'ai pas encore choisi.
+Nous devons revoir notre objectif. | Faut qu'on revoie notre objectif.
+Je suis prêt à recommencer. | Je suis prêt à retenter.
+Ce changement me fait peur. | Ce changement me fait flipper.
+Je préfère garder cette idée pour plus tard. | Je préfère garder cette idée pour plus tard.
+Nous avons fait de vrais progrès. | On a vraiment progressé.
+Je n'attends pas un résultat parfait. | J'attends pas un résultat parfait.
+Cette tentative n'a pas fonctionné. | Cette tentative a pas marché.
+Je vais préparer un nouveau plan. | Je vais préparer un nouveau plan.
+Je suis impatient de commencer. | J'ai trop hâte de commencer.
