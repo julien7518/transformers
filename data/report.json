@@ -1,0 +1,78 @@
+{
+  "seed": 42,
+  "pairs": 1000,
+  "semantic_seeds": 250,
+  "context_variants_per_seed": 4,
+  "groups": 249,
+  "topics": {
+    "emotions": 100,
+    "etudes": 100,
+    "loisirs": 100,
+    "numerique": 100,
+    "projets": 100,
+    "quotidien": 100,
+    "relations": 100,
+    "sorties": 100,
+    "transport": 100,
+    "travail": 100
+  },
+  "splits": {
+    "train": {
+      "pairs": 808,
+      "groups": 201,
+      "topics": {
+        "emotions": 76,
+        "etudes": 84,
+        "loisirs": 76,
+        "numerique": 84,
+        "projets": 76,
+        "quotidien": 84,
+        "relations": 76,
+        "sorties": 84,
+        "transport": 84,
+        "travail": 84
+      }
+    },
+    "validation": {
+      "pairs": 96,
+      "groups": 24,
+      "topics": {
+        "emotions": 12,
+        "etudes": 8,
+        "loisirs": 12,
+        "numerique": 8,
+        "projets": 12,
+        "quotidien": 8,
+        "relations": 12,
+        "sorties": 8,
+        "transport": 8,
+        "travail": 8
+      }
+    },
+    "test": {
+      "pairs": 96,
+      "groups": 24,
+      "topics": {
+        "emotions": 12,
+        "etudes": 8,
+        "loisirs": 12,
+        "numerique": 8,
+        "projets": 12,
+        "quotidien": 8,
+        "relations": 12,
+        "sorties": 8,
+        "transport": 8,
+        "travail": 8
+      }
+    }
+  },
+  "max_chars": {
+    "standard": 78,
+    "genz": 76
+  },
+  "normalized_pair_duplicates": 0,
+  "shared_groups_between_splits": 0,
+  "near_variant_rule": "Connected components over semantic seeds, either side normalized SequenceMatcher ratio >= 0.88; all suffix variants inherit the component",
+  "pairs_sha256": "7c0429926edb86059ce3f5f89fbda6e3e012285bd24883c266c5544db58e350f",
+  "human_review_completed": false
+}
