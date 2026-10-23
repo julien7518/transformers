@@ -65,11 +65,11 @@ par limite. Les phrases de validation sont volontairement les mêmes dans ce
 seul test de mémorisation, avec des identifiants distincts. Ce score ne mesure
 aucune généralisation. Exemples reproduits exactement :
 
-| Entrée | Direction | Sortie |
-| --- | --- | --- |
-| Ce film est excellent. | to_genz | Ce film est une dinguerie. |
-| Je suis KO. | to_standard | Je suis fatigué. |
-| Je ne viens pas. | to_genz | Je viens pas. |
+| Entrée                 | Direction   | Sortie                     |
+| ---------------------- | ----------- | -------------------------- |
+| Ce film est excellent. | to_genz     | Ce film est une dinguerie. |
+| Je suis KO.            | to_standard | Je suis fatigué.           |
+| Je ne viens pas.       | to_genz     | Je viens pas.              |
 
 ## Premier corpus
 
@@ -81,10 +81,10 @@ séparation. Groupes train/validation disjoints vérifiés par le pipeline. Cons
 Deux réglages exploratoires, poids choisis selon le minimum de perte validation
 **à l'intérieur de chaque run** :
 
-| Run | BPE cible | Paramètres | Meilleure époque | Perte train / validation | Arrêt | Temps boucle |
-| --- | --- | --- | --- | --- | --- | --- |
-| local-v1 | 2 000 | 1 316 850 | 2 | 1,730 / 4,047 | 10 | 15,80 s |
-| local-bpe512 | 512 | 1 057 280 | 7 | 0,995 / 2,500 | 17 | 30,85 s |
+| Run          | BPE cible | Paramètres | Meilleure époque | Perte train / validation | Arrêt | Temps boucle |
+| ------------ | --------- | ---------- | ---------------- | ------------------------ | ----- | ------------ |
+| local-v1     | 2 000     | 1 316 850  | 2                | 1,730 / 4,047            | 10    | 15,80 s      |
+| local-bpe512 | 512       | 1 057 280  | 7                | 0,995 / 2,500            | 17    | 30,85 s      |
 
 Les pertes par token **ne sont pas directement comparables entre vocabulaires**.
 Le second run explore un vocabulaire plus petit, sans amélioration de qualité
@@ -93,20 +93,20 @@ Aucun réglage supplémentaire n'a été fait après consultation du test.
 
 Évaluation finale descriptive du run exploratoire `local-bpe512` sur le test :
 
-| Sens | Exemples | Sortie exacte | Copie source | Source inchangée exacte (référence simple) | Génération limitée | Latence moyenne |
-| --- | --- | --- | --- | --- | --- | --- |
-| to_genz | 96 | 0 % | 0 % | 6,25 % | 0/96 | 17,7 ms |
-| to_standard | 96 | 0 % | 0 % | 6,25 % | 1/96 | 17,6 ms |
+| Sens        | Exemples | Sortie exacte | Copie source | Source inchangée exacte (référence simple) | Génération limitée | Latence moyenne |
+| ----------- | -------- | ------------- | ------------ | ------------------------------------------ | ------------------ | --------------- |
+| to_genz     | 96       | 0 %           | 0 %          | 6,25 %                                     | 0/96               | 17,7 ms         |
+| to_standard | 96       | 0 %           | 0 %          | 6,25 %                                     | 1/96               | 17,6 ms         |
 
 Une référence unique n'épuise pas toutes les reformulations correctes ; toutefois
 les erreurs observées confirment ici l'insuffisance du modèle. Le modèle fait
 moins bien que la copie inchangée en correspondance exacte. Ces temps mesurent
 la fonction locale à deux threads, sans transport HTTP ni navigateur.
 
-| Entrée inédite | Sens | Sortie observée | Problème |
-| --- | --- | --- | --- |
-| J'ai oublié mon cahier. | to_genz | J'ai zappé cat. | Objet perdu et mot mal formé |
-| J'ai zappé mon cahier. | to_standard | J'ai oublié mon méthode. | Objet remplacé, accord incorrect |
+| Entrée inédite          | Sens        | Sortie observée          | Problème                         |
+| ----------------------- | ----------- | ------------------------ | -------------------------------- |
+| J'ai oublié mon cahier. | to_genz     | J'ai zappé cat.          | Objet perdu et mot mal formé     |
+| J'ai zappé mon cahier.  | to_standard | J'ai oublié mon méthode. | Objet remplacé, accord incorrect |
 
 Les rapports JSON complets conservent les 192 sorties, références, temps et
 indicateurs d'arrêt. Un travail futur doit enrichir le corpus en situations et

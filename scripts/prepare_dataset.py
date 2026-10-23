@@ -3,15 +3,16 @@
 
 Uses the Python standard library only. Run from any working directory.
 """
+
 import argparse
-from collections import Counter
-from difflib import SequenceMatcher
 import hashlib
 import json
-from pathlib import Path
 import random
 import re
 import unicodedata
+from collections import Counter
+from difflib import SequenceMatcher
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SUFFIXES = (
@@ -33,7 +34,10 @@ def read_jsonl(path):
 
 
 def write_jsonl(path, rows):
-    Path(path).write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows), encoding="utf-8")
+    Path(path).write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows),
+        encoding="utf-8",
+    )
 
 
 def load_seeds(path):
@@ -46,7 +50,9 @@ def load_seeds(path):
             continue
         if topic is None or line.count(" | ") != 1:
             raise ValueError(f"Invalid seed line: {line}")
-        standard, genz = (unicodedata.normalize("NFC", part.strip()) for part in line.split(" | "))
+        standard, genz = (
+            unicodedata.normalize("NFC", part.strip()) for part in line.split(" | ")
+        )
         seeds.append((topic, standard, genz))
     return seeds
 
@@ -54,30 +60,43 @@ def load_seeds(path):
 def build_pairs(seeds):
     # Conservative connected components: either side can identify a near variant.
     parent = list(range(len(seeds)))
+
     def find(i):
         while parent[i] != i:
             parent[i] = parent[parent[i]]
             i = parent[i]
         return i
+
     texts = [(canonical(s), canonical(g)) for _, s, g in seeds]
     for i, (s, g) in enumerate(texts):
         for j in range(i):
             sj, gj = texts[j]
-            if max(SequenceMatcher(None, s, sj).ratio(), SequenceMatcher(None, g, gj).ratio()) >= .88:
+            if (
+                max(
+                    SequenceMatcher(None, s, sj).ratio(),
+                    SequenceMatcher(None, g, gj).ratio(),
+                )
+                >= 0.88
+            ):
                 parent[find(i)] = find(j)
     pairs = []
     for index, (topic, standard, genz) in enumerate(seeds):
         group = f"family-{find(index) + 1:04d}"
         for variant, (ss, gs) in enumerate(SUFFIXES):
-            pairs.append({
-                "id": f"pair-{index + 1:04d}-{variant}",
-                "standard": standard + ss, "genz": genz + gs,
-                "group_id": group, "topic": topic,
-                "provenance": {
-                    "kind": "synthetic", "source": "Original AI-authored educational seeds in data/seeds.txt; controlled pragmatic suffix expansion v1",
-                    "usage_rights": "Project-generated synthetic text; dedicated under CC0-1.0; no third-party corpus used",
-                },
-            })
+            pairs.append(
+                {
+                    "id": f"pair-{index + 1:04d}-{variant}",
+                    "standard": standard + ss,
+                    "genz": genz + gs,
+                    "group_id": group,
+                    "topic": topic,
+                    "provenance": {
+                        "kind": "synthetic",
+                        "source": "Original AI-authored educational seeds in data/seeds.txt; controlled pragmatic suffix expansion v1",
+                        "usage_rights": "Project-generated synthetic text; dedicated under CC0-1.0; no third-party corpus used",
+                    },
+                }
+            )
     return pairs
 
 
@@ -106,7 +125,10 @@ def validate_pairs(rows):
         provenance = row.get("provenance", {})
         if provenance.get("kind") not in ("synthetic", "sourced"):
             raise ValueError("Invalid provenance kind")
-        if any(not isinstance(provenance.get(k), str) or not provenance[k].strip() for k in ("source", "usage_rights")):
+        if any(
+            not isinstance(provenance.get(k), str) or not provenance[k].strip()
+            for k in ("source", "usage_rights")
+        ):
             raise ValueError("Incomplete provenance")
 
 
@@ -122,9 +144,11 @@ def split_pairs(rows, seed=42):
         groups = sorted(g for g, t in topics.items() if t == topic)
         rng.shuffle(groups)
         # Alternate rounding half-groups so small strata stay near 80/10/10.
-        n = max(1, int(len(groups) * .1 + (.5 if topic_index % 2 == 0 else 0)))
+        n = max(1, int(len(groups) * 0.1 + (0.5 if topic_index % 2 == 0 else 0)))
         for index, group in enumerate(groups):
-            assignment[group] = "validation" if index < n else "test" if index < 2 * n else "train"
+            assignment[group] = (
+                "validation" if index < n else "test" if index < 2 * n else "train"
+            )
     for row in rows:
         splits[assignment[row["group_id"]]].append(row)
     validate_splits(rows, splits)
@@ -150,15 +174,29 @@ def validate_splits(rows, splits):
 
 def report(rows, splits, seeds, seed):
     return {
-        "seed": seed, "pairs": len(rows), "semantic_seeds": len(seeds),
+        "seed": seed,
+        "pairs": len(rows),
+        "semantic_seeds": len(seeds),
         "context_variants_per_seed": len(SUFFIXES),
         "groups": len({r["group_id"] for r in rows}),
         "topics": dict(sorted(Counter(r["topic"] for r in rows).items())),
-        "splits": {name: {"pairs": len(part), "groups": len({r["group_id"] for r in part}), "topics": dict(sorted(Counter(r["topic"] for r in part).items()))} for name, part in splits.items()},
-        "max_chars": {key: max(len(r[key]) for r in rows) for key in ("standard", "genz")},
-        "normalized_pair_duplicates": 0, "shared_groups_between_splits": 0,
+        "splits": {
+            name: {
+                "pairs": len(part),
+                "groups": len({r["group_id"] for r in part}),
+                "topics": dict(sorted(Counter(r["topic"] for r in part).items())),
+            }
+            for name, part in splits.items()
+        },
+        "max_chars": {
+            key: max(len(r[key]) for r in rows) for key in ("standard", "genz")
+        },
+        "normalized_pair_duplicates": 0,
+        "shared_groups_between_splits": 0,
         "near_variant_rule": "Connected components over semantic seeds, either side normalized SequenceMatcher ratio >= 0.88; all suffix variants inherit the component",
-        "pairs_sha256": hashlib.sha256("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows).encode()).hexdigest(),
+        "pairs_sha256": hashlib.sha256(
+            "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows).encode()
+        ).hexdigest(),
         "human_review_completed": False,
     }
 
@@ -184,7 +222,9 @@ def main():
         review.extend(rng.sample(candidates, min(5, len(candidates))))
     write_jsonl(args.output_dir / "review_sample.jsonl", review)
     summary = report(rows, splits, seeds, args.seed)
-    (args.output_dir / "report.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (args.output_dir / "report.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

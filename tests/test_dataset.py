@@ -1,11 +1,14 @@
 """Dataset integrity tests; run with python3 -m unittest discover -s tests."""
+
 import copy
 import importlib.util
-from pathlib import Path
 import unittest
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location("prepare_dataset", ROOT / "scripts/prepare_dataset.py")
+spec = importlib.util.spec_from_file_location(
+    "prepare_dataset", ROOT / "scripts/prepare_dataset.py"
+)
 dataset = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(dataset)
 
@@ -14,7 +17,10 @@ class DatasetTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.rows = dataset.read_jsonl(ROOT / "data/pairs.jsonl")
-        cls.splits = {name: dataset.read_jsonl(ROOT / f"data/{name}.jsonl") for name in ("train", "validation", "test")}
+        cls.splits = {
+            name: dataset.read_jsonl(ROOT / f"data/{name}.jsonl")
+            for name in ("train", "validation", "test")
+        }
 
     def test_delivered_corpus_and_reproducibility(self):
         dataset.validate_pairs(self.rows)
@@ -25,7 +31,9 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(dataset.build_pairs(seeds), self.rows)
         self.assertEqual(dataset.split_pairs(self.rows, 42), self.splits)
         for part in self.splits.values():
-            self.assertEqual({r["topic"] for r in part}, {r["topic"] for r in self.rows})
+            self.assertEqual(
+                {r["topic"] for r in part}, {r["topic"] for r in self.rows}
+            )
 
     def test_detects_leakage(self):
         splits = copy.deepcopy(self.splits)
@@ -45,14 +53,21 @@ class DatasetTests(unittest.TestCase):
             dataset.validate_pairs([self.rows[0], self.rows[0]])
 
     def test_near_variants_join_components(self):
-        rows = dataset.build_pairs([("a", "Je ne comprends pas cet exercice.", "Je capte pas cet exo."), ("b", "Je ne comprends pas cet exercice !", "Je capte pas cet exo !")])
+        rows = dataset.build_pairs(
+            [
+                ("a", "Je ne comprends pas cet exercice.", "Je capte pas cet exo."),
+                ("b", "Je ne comprends pas cet exercice !", "Je capte pas cet exo !"),
+            ]
+        )
         self.assertEqual(len({r["group_id"] for r in rows}), 1)
 
     def test_review_sample_is_training_only(self):
         review = dataset.read_jsonl(ROOT / "data/review_sample.jsonl")
         self.assertEqual(len(review), 50)
         self.assertEqual(len({r["id"] for r in review}), 50)
-        self.assertTrue({r["id"] for r in review} <= {r["id"] for r in self.splits["train"]})
+        self.assertTrue(
+            {r["id"] for r in review} <= {r["id"] for r in self.splits["train"]}
+        )
 
 
 if __name__ == "__main__":

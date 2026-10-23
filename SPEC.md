@@ -13,10 +13,10 @@ Il s’agit d’un transfert de style au sein du français. Le résultat doit co
 
 Exemples indicatifs, à harmoniser lors de la création du corpus :
 
-| Sens | Entrée | Sortie possible |
-| --- | --- | --- |
+| Sens             | Entrée                          | Sortie possible            |
+| ---------------- | ------------------------------- | -------------------------- |
 | Standard → Gen Z | Ce film est vraiment excellent. | Ce film est une dinguerie. |
-| Gen Z → standard | J’ai trop le seum. | Je suis vraiment déçu. |
+| Gen Z → standard | J’ai trop le seum.              | Je suis vraiment déçu.     |
 
 La priorité est pédagogique : comprendre et vérifier chaque brique. Une qualité comparable à celle d’un grand modèle préentraîné n’est pas un objectif de la première version.
 
@@ -91,14 +91,14 @@ cible  : <bos> phrase standard <eos>
 
 Notations : `B` batch, `S` longueur source, `T` longueur cible, `D` dimension du modèle, `V` taille du vocabulaire.
 
-| Élément | Forme / comportement |
-| --- | --- |
-| Identifiants source | `(B, S)`, entiers |
-| Identifiants cible en entrée du décodeur | `(B, T)`, entiers |
-| Embeddings et états cachés | `(B, longueur, D)` |
-| Logits en sortie | `(B, T, V)` ; pas de softmax avant la perte |
-| Dimension d’une tête | `D / nombre_de_têtes`, entier |
-| Attention | `softmax(QKᵀ / sqrt(d_head) + masque) V` |
+| Élément                                  | Forme / comportement                        |
+| ---------------------------------------- | ------------------------------------------- |
+| Identifiants source                      | `(B, S)`, entiers                           |
+| Identifiants cible en entrée du décodeur | `(B, T)`, entiers                           |
+| Embeddings et états cachés               | `(B, longueur, D)`                          |
+| Logits en sortie                         | `(B, T, V)` ; pas de softmax avant la perte |
+| Dimension d’une tête                     | `D / nombre_de_têtes`, entier               |
+| Attention                                | `softmax(QKᵀ / sqrt(d_head) + masque) V`    |
 
 L’encodeur utilise une self-attention non causale et ignore le padding source. Le décodeur utilise une self-attention causale qui ignore le padding cible, puis une cross-attention sur la sortie de l’encodeur qui ignore le padding source. La normalisation est définie explicitement, par exemple en post-norm : `LayerNorm(x + Dropout(sous_couche(x)))`.
 
@@ -128,7 +128,7 @@ L’agent modèle implémente FastAPI ; l’agent interface consomme ce contrat 
 `POST /api/translate` reçoit :
 
 ```json
-{"text": "Ce film est vraiment excellent.", "direction": "to_genz"}
+{ "text": "Ce film est vraiment excellent.", "direction": "to_genz" }
 ```
 
 Réponse HTTP 200 :
@@ -147,17 +147,22 @@ Réponse HTTP 200 :
 Toutes les erreurs applicatives adoptent ce format :
 
 ```json
-{"error": {"code": "MODEL_UNAVAILABLE", "message": "Aucun modèle entraîné n’est disponible."}}
+{
+  "error": {
+    "code": "MODEL_UNAVAILABLE",
+    "message": "Aucun modèle entraîné n’est disponible."
+  }
+}
 ```
 
-| Statut | Code | Cas |
-| --- | --- | --- |
-| 400 | `EMPTY_TEXT` | Texte vide après suppression des espaces extérieurs |
-| 400 | `INPUT_TOO_LONG` | Plus de 500 caractères Unicode ou limite source de tokens dépassée |
-| 422 | `INVALID_REQUEST` | JSON invalide, type incorrect ou direction inconnue |
-| 503 | `MODEL_UNAVAILABLE` | Checkpoint ou tokenizer absent, incompatible ou non chargé |
-| 500 | `INTERNAL_ERROR` | Échec inattendu, sans exposer les détails internes au navigateur |
-| 504 | `BACKEND_TIMEOUT` | Délai du proxy Next.js dépassé |
+| Statut | Code                | Cas                                                                |
+| ------ | ------------------- | ------------------------------------------------------------------ |
+| 400    | `EMPTY_TEXT`        | Texte vide après suppression des espaces extérieurs                |
+| 400    | `INPUT_TOO_LONG`    | Plus de 500 caractères Unicode ou limite source de tokens dépassée |
+| 422    | `INVALID_REQUEST`   | JSON invalide, type incorrect ou direction inconnue                |
+| 503    | `MODEL_UNAVAILABLE` | Checkpoint ou tokenizer absent, incompatible ou non chargé         |
+| 500    | `INTERNAL_ERROR`    | Échec inattendu, sans exposer les détails internes au navigateur   |
+| 504    | `BACKEND_TIMEOUT`   | Délai du proxy Next.js dépassé                                     |
 
 La validation Python doit aussi normaliser les erreurs FastAPI dans cette enveloppe. Pour les requêtes invalides, la validation prime sur la disponibilité du modèle. La longueur en caractères utilise des points de code Unicode, y compris côté interface ; la limite en tokens est vérifiée par Python, marqueur de direction et EOS compris, sans troncature silencieuse.
 
@@ -188,17 +193,17 @@ Charger le modèle une seule fois au démarrage et partager exactement le tokeni
 
 ## 8. Étapes et critères de validation
 
-| Étape | Livrable | Critère pour passer à la suite |
-| --- | --- | --- |
-| 1. Cadrage du corpus | Règles de style et paires représentatives relues | Les deux directions et la conservation du sens sont définies |
-| 2. Données et tokenizer | Chargement, découpage, tokenizer sauvegardé, batches | Tokens spéciaux stables, décodage vérifié, absence de fuite entre sous-ensembles |
-| 3. Briques du Transformer | Attention, embeddings, masques, blocs | Formes correctes, paramètres enregistrés, gradients finis |
-| 4. Modèle complet | Encodeur-décodeur et projection vocabulaire | Un forward et un backward fonctionnent sur un batch avec padding |
-| 5. Pipeline d’entraînement | Boucle, métriques et checkpoints | Le modèle surapprend un minuscule corpus dans les deux sens |
-| 6. Génération | Traduction locale depuis un checkpoint | Génération bornée, arrêt sur EOS, rechargement reproductible |
-| 7. Expérience sur le corpus | Run documenté et évaluation | Résultats séparés par direction et limites identifiées |
-| 8. Interface web | Application locale | Les deux directions fonctionnent ; erreurs d’entrée et de chargement gérées |
-| 9. Livraison pédagogique | README et exemples | Installation, entraînement et lancement reproductibles depuis les instructions |
+| Étape                       | Livrable                                             | Critère pour passer à la suite                                                   |
+| --------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 1. Cadrage du corpus        | Règles de style et paires représentatives relues     | Les deux directions et la conservation du sens sont définies                     |
+| 2. Données et tokenizer     | Chargement, découpage, tokenizer sauvegardé, batches | Tokens spéciaux stables, décodage vérifié, absence de fuite entre sous-ensembles |
+| 3. Briques du Transformer   | Attention, embeddings, masques, blocs                | Formes correctes, paramètres enregistrés, gradients finis                        |
+| 4. Modèle complet           | Encodeur-décodeur et projection vocabulaire          | Un forward et un backward fonctionnent sur un batch avec padding                 |
+| 5. Pipeline d’entraînement  | Boucle, métriques et checkpoints                     | Le modèle surapprend un minuscule corpus dans les deux sens                      |
+| 6. Génération               | Traduction locale depuis un checkpoint               | Génération bornée, arrêt sur EOS, rechargement reproductible                     |
+| 7. Expérience sur le corpus | Run documenté et évaluation                          | Résultats séparés par direction et limites identifiées                           |
+| 8. Interface web            | Application locale                                   | Les deux directions fonctionnent ; erreurs d’entrée et de chargement gérées      |
+| 9. Livraison pédagogique    | README et exemples                                   | Installation, entraînement et lancement reproductibles depuis les instructions   |
 
 ### Vérifications techniques ciblées
 
@@ -245,11 +250,11 @@ Le README documentera les commandes réelles une fois implémentées. Ne pas ajo
 
 Après confirmation explicite de l’utilisateur, lancer exactement trois agents dans trois worktrees isolés, issus du même commit contenant cette spécification. Ne pas lancer les agents ni créer leurs branches pendant la rédaction de la spec. Les agents suivent ce document comme contrat commun ; tout changement de contrat est coordonné avant application.
 
-| Agent / branche | Responsabilité | Fichiers possédés |
-| --- | --- | --- |
-| Données — `codex/dataset` | Créer, documenter, valider et découper le corpus | `data/**`, `scripts/prepare_dataset.py`, `tests/test_dataset.py` |
-| Modèle — `codex/model-inference` | Corriger le Transformer, construire tokenizer, batches, entraînement, inférence et API Python | `src/attention/**`, `configs/**`, tests Python hors dataset, `pyproject.toml`, `uv.lock` |
-| Interface — `codex/web-interface` | Réaliser l’interface React/Next.js, le proxy et les états d’interaction | `web/**`, dont dépendances, lockfile, `.env.example`, README et tests frontend |
+| Agent / branche                   | Responsabilité                                                                                | Fichiers possédés                                                                        |
+| --------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Données — `codex/dataset`         | Créer, documenter, valider et découper le corpus                                              | `data/**`, `scripts/prepare_dataset.py`, `tests/test_dataset.py`                         |
+| Modèle — `codex/model-inference`  | Corriger le Transformer, construire tokenizer, batches, entraînement, inférence et API Python | `src/attention/**`, `configs/**`, tests Python hors dataset, `pyproject.toml`, `uv.lock` |
+| Interface — `codex/web-interface` | Réaliser l’interface React/Next.js, le proxy et les états d’interaction                       | `web/**`, dont dépendances, lockfile, `.env.example`, README et tests frontend           |
 
 Chaque agent effectue des commits sur sa branche et fournit un compte rendu : fichiers changés, commandes de validation, résultats, limites et éventuels blocages. Aucun ne fusionne les branches des autres. `SPEC.md`, le README racine et `.gitignore` sont coordonnés par l’agent principal pour éviter les conflits.
 
