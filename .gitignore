@@ -3,3 +3,7 @@
 
 # Python files
 __pycache__
+
+# Local training artifacts
+checkpoints/
+.pytest_cache/
