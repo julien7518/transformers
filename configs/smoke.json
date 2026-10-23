@@ -1,0 +1,9 @@
+{
+  "d_model": 48,
+  "heads": 4,
+  "encoder_layers": 1,
+  "decoder_layers": 1,
+  "d_ff": 96,
+  "dropout": 0.0,
+  "max_length": 64
+}

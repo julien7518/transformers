@@ -1,0 +1,90 @@
+# identifiant | formes reconnues (séparées par ;) | interprétation choisie pour ce corpus
+ref | ref;référence | Comprendre un clin d'œil culturel ; avoir la ref ne signifie pas approuver.
+this_is_fine | this is fine | Afficher du calme malgré une situation problématique ; pas simplement aller bien.
+here_we_go_again | here we go again | Voir recommencer une difficulté familière.
+mission_passed | mission passed | Réussite d'un objectif, allusion à une interface de jeu.
+wasted | wasted | Échec spectaculaire en contexte de jeu, pas traduction universelle de mourir.
+uno_reverse | uno reverse | Retourner l'argument ou la situation contre son auteur.
+quoicoubeh | quoicoubeh | Réplique de jeu de mots après quoi ; ne pas apprendre quoi → quoicoubeh.
+skibidi | skibidi | Référence absurde citée en contexte ; pas d'équivalent français stable.
+brainrot | brainrot | Contenu Internet absurde ou répétitif ; emploi familier, pas diagnostic médical.
+pov | POV | Invitation à imaginer une situation, pas affirmation que celle-ci a vraiment eu lieu.
+canon_event | canon event | Présenter ironiquement une expérience comme un passage obligé.
+side_eye | side eye | Regard méfiant, désapprobateur ou sceptique selon la phrase.
+main_character | main character;personnage principal | Assurance théâtrale ou égocentrisme selon le contexte.
+pnj | PNJ | Personnage non-joueur littéral ou comportement automatique au figuré.
+lore | lore | Histoire de fond d'un univers ou éléments de vie d'une personne.
+side_quest | side quest;quête annexe;quêtes annexes | Détour ou tâche secondaire ; conserver l'action précise.
+boss_final | boss final | Dernier adversaire de jeu ou difficulté supérieure au figuré.
+glitch | glitch | Bug ou coïncidence vécue comme une anomalie ; conserver la nuance de comparaison.
+villain_arc | villain arc;arc de méchant | Dramatisation ironique d'un changement après une contrariété.
+arc | mon arc;son arc | Période de vie racontée comme un chapitre, pas nécessairement changement durable.
+aura | aura | Charisme ou crédibilité ; les points d'aura sont une hyperbole, pas un score réel.
+rizz | rizz | Aisance à séduire ; ne pas confondre avec consentement ou amour réciproque.
+delulu | delulu | Se faire des illusions en contexte léger ; pas diagnostic psychiatrique.
+crush | crush | Attirance amoureuse, pas simple sympathie.
+red_flag | red flag | Signal inquiétant contextualisé, pas jugement automatique sur une personne.
+green_flag | green flag | Signe positif contextualisé.
+friendzone | friendzone | Relation amicale là où une personne espérait davantage.
+situationship | situationship | Relation affective dont le statut reste indéfini.
+ghosting | ghost;ghosté;ghoste | Arrêter de répondre sans explication, pas être simplement occupé.
+vu | laissé en vu;laissée en vu | Message lu mais sans réponse.
+remis | en remis | Message livré et non ouvert, à distinguer du vu.
+cringe | cringe | Gêne ou malaise social ; ne pas transformer en dégoût.
+seum | seum | Déception ou ressentiment ; intensité à préserver.
+pls | PLS | État de détresse figurée dans ce corpus, jamais consigne de secours.
+ko | KO | Fatigue ou choc figuré ; le contexte distingue les deux.
+hype | hype;hypé | Enthousiasme ou attente, pas garantie de qualité.
+banger | banger | Morceau ou production très appréciée.
+masterclass | masterclass | Prestation jugée excellente, pas cours magistral au sens littéral.
+peak | peak | Sommet qualitatif comparatif, pas simple approbation.
+zero_skip | zéro skip | Album dont on apprécie tous les morceaux.
+carry | carry | Assurer l'essentiel du travail ou contribuer fortement, selon la phrase.
+clutch | clutch | Sauver une situation difficile au dernier moment.
+rage_quit | rage quit | Abandon dû à la colère ; ne pas confondre avec déconnexion.
+gg | GG | Félicitation après une partie.
+afk | AFK | Absence temporaire du clavier.
+meta | méta | Stratégie dominante dans un jeu à un moment donné.
+nerf | nerf | Réduction de puissance après un rééquilibrage.
+buff | buff | Augmentation de puissance après un rééquilibrage.
+grind | grind | Entraînement ou répétition intensive en vue de progresser.
+farm | farmer;farm | Répéter une activité pour accumuler une ressource ; aura est figuré.
+noob | noob | Débutant en contexte de jeu ; ne pas ajouter d'insulte.
+smurf | smurf | Joueur expérimenté sur un compte de niveau inférieur.
+lag | lag | Retard de réponse lié à la connexion.
+freeze | freeze | Blocage de l'image ou du jeu.
+tilt | tilt;tilted | Énervement qui perturbe la manière de jouer.
+skill_issue | skill issue | Difficulté attribuée au niveau de jeu, pas à la connexion.
+let_cook | cook | Laisser développer une idée ou une solution ; pas cuisson littérale.
+lock_in | lock in;locked in | Se concentrer intensément sur une tâche.
+cuit | cuit;cuits | Fatigué ou en mauvaise posture selon la phrase ; pas toujours échec certain.
+speedrun | speedrun | Terminer très vite ou ironiser sur un échec rapide.
+flex | flex | Montrer ostensiblement une réussite ou une possession.
+fit | fit | Tenue vestimentaire.
+glow_up | glow up | Évolution positive d'apparence ou de confiance, selon la phrase.
+vibe | vibe | Ambiance, affinité ou préférence selon le contexte.
+chill | chill | Calme, détente ou activité tranquille.
+roast | roast | Moquerie ; préserver la distinction entre plaisanterie et blessure.
+shitpost | shitpost | Contenu volontairement absurde et parfois sommaire.
+rage_bait | rage bait | Contenu visant à susciter la colère pour obtenir des réactions.
+clickbait | clickbait;putaclic | Promesse de titre visant le clic, parfois trompeuse.
+doomscrolling | doomscrolling | Défilement persistant de nouvelles angoissantes.
+lurk | lurk;lurke | Lire sans participer.
+feed | feed | Fil d'actualité ; feed le troll signifie alimenter une provocation.
+spam | spam;spamme | Messages répétés, pas tout message multiple.
+mute | mute | Couper les notifications ou le son.
+sus | sus | Suspect ou peu crédible, pas preuve de culpabilité.
+no_cap | no cap | Affirmation de sincérité, pas preuve de vérité.
+mytho | mytho | Mensonge ou affirmation douteuse ; conserver le degré de certitude.
+w_l | gros W;petit W;gros L;ce L | Victoire ou échec ponctuel, pas valeur d'une personne.
+les_termes | les termes | Approbation d'une formulation qui exprime précisément son avis.
+second_degre | second degré;premier degré | Distinguer ironie et sens littéral ; contexte indispensable.
+on_ecoute | on écoute et on juge pas | Cadre humoristique invitant à une confidence sans jugement.
+cest_pas_faux | c'est pas faux | Approbation feinte pour masquer une incompréhension dans les exemples explicites ; peut aussi être littéral ailleurs.
+calculs | calculs sont pas bons;calculs étaient pas bons | Planification ou estimation ratée, pas toute erreur mathématique.
+glisse_chef | glissé chef | Excuse humoristique d'une maladresse, pas accident avéré.
+cheh | cheh | Réaction moqueuse à un revers, ne pas ajouter gratuitement de mépris.
+sah | sah | Marque de sincérité ou de plaisir dans les exemples, pas une intensité universelle.
+ratio | ratio | Réponse plus approuvée qu'un message initial, pas preuve de vérité.
+feur | feur | Jeu de mots après quoi, pas traduction du mot quoi.
+tkt | tkt | Abréviation de ne t'inquiète pas ; pas garantie d'absence de risque.
