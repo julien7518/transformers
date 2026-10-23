@@ -1,0 +1,130 @@
+{
+  "dataset_version": "v2-memes-context",
+  "model_id": "memes-v2",
+  "checkpoint_promoted_to_web": false,
+  "best_epoch": {
+    "epoch": 21,
+    "train_loss": 1.2533667406309357,
+    "validation_loss": 3.026850666635751,
+    "elapsed_seconds": 48.146312832977856
+  },
+  "epochs_completed": 36,
+  "elapsed_training_seconds": 84.51830029199482,
+  "configuration": {
+    "vocab_size": 1024,
+    "pad_id": 0,
+    "d_model": 128,
+    "heads": 4,
+    "encoder_layers": 2,
+    "decoder_layers": 2,
+    "d_ff": 512,
+    "dropout": 0.1,
+    "max_length": 64
+  },
+  "parameters": 1188864,
+  "arguments": {
+    "train": "data/train.jsonl",
+    "validation": "data/validation.jsonl",
+    "output": "checkpoints/memes-v2",
+    "config": "configs/default.json",
+    "epochs": 100,
+    "batch_size": 32,
+    "lr": 0.0005,
+    "patience": 15,
+    "seed": 42,
+    "vocab_size": 1024,
+    "device": "auto",
+    "threads": 4,
+    "resume": false
+  },
+  "split_hashes": {
+    "train": "c49ca7dd349582d059565da5101aaa069f51dd81c16c18e68aa19f897091ad63",
+    "validation": "f3f48fe6a5655947f6d74fb6133deb453d6211ed68e4253df3ef72fefe7967f0"
+  },
+  "results": {
+    "to_genz": {
+      "count": 169,
+      "exact_match": 0.0,
+      "copy_rate": 0.0,
+      "unchanged_source_exact_match": 0.005917159763313609,
+      "truncated_rate": 0.011834319526627219,
+      "mean_seconds": 0.013236909023087924
+    },
+    "to_standard": {
+      "count": 169,
+      "exact_match": 0.0,
+      "copy_rate": 0.0,
+      "unchanged_source_exact_match": 0.005917159763313609,
+      "truncated_rate": 0.0,
+      "mean_seconds": 0.012004478338254429
+    }
+  },
+  "illustrative_failures": {
+    "to_genz": [
+      {
+        "id": "v2-8f34dc4fdc83a822",
+        "source": "La bibliothèque est déjà pleine.",
+        "reference": "La bibliothèque est déjà blindée.",
+        "translation": "La réunion est débutant.",
+        "direction": "to_genz",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.008914083999115974
+      },
+      {
+        "id": "v2-38d7d611afdbe291",
+        "source": "Je n'ai pas envie de tricher.",
+        "reference": "J'ai pas envie de tricher.",
+        "translation": "J'ai pas envie de m'ariexp.",
+        "direction": "to_genz",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.013227874995209277
+      },
+      {
+        "id": "v2-3419996896977a79",
+        "source": "Je suis disponible cet après-midi.",
+        "reference": "Je suis dispo cet après-midi.",
+        "translation": "Je suis en codez-vité une dinguerie.",
+        "direction": "to_genz",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.011728375015081838
+      }
+    ],
+    "to_standard": [
+      {
+        "id": "v2-8f34dc4fdc83a822",
+        "source": "La bibliothèque est déjà blindée.",
+        "reference": "La bibliothèque est déjà pleine.",
+        "translation": "La réunion est annulée.",
+        "direction": "to_standard",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.005794457974843681
+      },
+      {
+        "id": "v2-38d7d611afdbe291",
+        "source": "J'ai pas envie de tricher.",
+        "reference": "Je n'ai pas envie de tricher.",
+        "translation": "Je n'ai pas envie de tâ envie de regarder cette qu'ai pas envie.",
+        "direction": "to_standard",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.020420042012119666
+      },
+      {
+        "id": "v2-3419996896977a79",
+        "source": "Je suis dispo cet après-midi.",
+        "reference": "Je suis disponible cet après-midi.",
+        "translation": "Je suis en pleutxprendre.",
+        "direction": "to_standard",
+        "truncated": false,
+        "model_id": "memes-v2",
+        "seconds": 0.009834875003434718
+      }
+    ]
+  },
+  "human_evaluation_completed": false,
+  "conclusion": "Technical dataset and pipeline checks pass. Linguistic generalization remains insufficient; exact match zero does not alone measure all valid paraphrases, but malformed outputs also observed. No production quality claim."
+}

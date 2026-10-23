@@ -71,7 +71,7 @@ aucune généralisation. Exemples reproduits exactement :
 | Je suis KO.            | to_standard | Je suis fatigué.           |
 | Je ne viens pas.       | to_genz     | Je viens pas.              |
 
-## Premier corpus
+## Premier corpus (v1, historique avant refonte des données)
 
 808 paires train, 96 validation, 96 test ; expansion bidirectionnelle après
 séparation. Groupes train/validation disjoints vérifiés par le pipeline. Consulter
@@ -112,3 +112,7 @@ Les rapports JSON complets conservent les 192 sorties, références, temps et
 indicateurs d'arrêt. Un travail futur doit enrichir le corpus en situations et
 variantes indépendantes, puis réévaluer sur un nouveau test réservé. Il n'y a
 pas de seuil de qualité ou de latence annoncé comme atteint.
+
+## Refonte v2 du corpus
+
+Les fichiers `data/*.jsonl` actuels sont la v2, pas les 808/96/96 exemples de cette expérience historique. Voir `data/README.md` et `data/TRAINING_V2.md` pour le nouveau découpage, le nouvel essai et ses limites. Ne pas reprendre ces checkpoints v1 avec `--resume` sur les nouvelles données.

@@ -1,81 +1,75 @@
-# Corpus pédagogique français standard ↔ français Gen Z
+# Corpus v2 — français standard ↔ français Internet / Gen Z
 
-Ce corpus contient **1 000 paires synthétiques**, issues de **250 noyaux
-sémantiques rédigés par l'agent IA**, chacun décliné en quatre contextes
-pragmatiques : phrase seule, annonce à l'interlocuteur, proposition d'en reparler
-demain, souhait de tenir l'interlocuteur informé. Ce ne sont donc **pas 1 000
-situations indépendantes**. Les suffixes apportent un acte de communication
-supplémentaire, sans substitutions de noms ou de nombres pour gonfler le volume.
-Ce premier jeu sert surtout à vérifier et explorer le pipeline ; sa diversité et
-sa taille ne permettent pas de promettre une généralisation linguistique.
+Le corpus contient **1 346 paires synthétiques**, dont **771 exemples rédigés individuellement** et **575 exemples compositionnels** issus de 36 patrons grammaticaux. Il couvre **31 thèmes** et **89 expressions ou références** inventoriées. Ces nombres décrivent le corpus, pas 1 346 situations indépendantes ni 89 mèmes distincts : l’inventaire inclut aussi de l’argot et du vocabulaire gaming.
 
-## Origine et droits
+Cette version remplace la v1 de 1 000 lignes, qui répétait 250 phrases sous quatre suffixes. **L’expansion par suffixes de remplissage a été supprimée.** Le contenu rédigé comprend maintenant humour, réactions, conversations, culture Internet, références francophones, gaming, relations, études, questions et négations.
 
-`seeds.txt` contient les 250 paires originales et les dix thèmes. Aucun réseau
-social, corpus tiers, message privé ou texte personnel n'a été collecté. Emma et
-Lyon sont des références fictive/géographique génériques, sans information sur
-une personne réelle. Les textes synthétiques produits pour ce projet sont mis à
-disposition sous **CC0-1.0**, dans la mesure des droits applicables. Les champs
-`provenance` précisent cette origine ; `synthetic` ne signifie pas témoignage réel
-ni validation humaine. Les phrases ne constituent pas des citations.
+## Références et sens
 
-## Registre
+Exemples d’entrées couvertes : aura, PNJ, lore, side quest, boss final, rizz, delulu, red flag, ghoster, laissé en vu, remis, cringe, « laisse-le cook », lock in, hype, banger, rage quit, skill issue, POV, « this is fine », « c’est pas faux », « j’ai glissé chef », « les calculs sont pas bons », ratio, quoicoubeh, feur et skibidi.
 
-Français informel écrit compréhensible : suppression occasionnelle de « ne »,
-« capter », « bosser », « seum », « dinguerie », « grave », « chill », « checker ».
-Les intensités sont conservées autant que possible et aucun emoji n'est ajouté.
-Certaines phrases restent identiques lorsque la formulation convient aux deux
-registres. Des noms, horaires, nombres, accents, apostrophes et négations sont
-présents. Le style est volontairement modéré ; il représente une convention
-pédagogique et non une définition universelle du langage d'une génération.
+`references.tsv` décrit les interprétations retenues et leurs limites. `reference_tags` est un repérage lexical destiné à l’audit ; il ne constitue pas une annotation sémantique parfaite. Un même mot peut être polysémique et un tag peut apparaître dans une négation.
 
-## Fichiers et reproductibilité
+Le registre est plus expressif que dans la v1, mais chaque phrase ne doit pas devenir un catalogue de références. Les paires conservent autant que possible action, sujet, objet, négation et intensité. Exemples originaux :
+
+| Standard | Internet / Gen Z |
+| --- | --- |
+| Je ne connais pas cette référence et je préfère le dire. | J’ai pas la ref, je vais pas mytho. |
+| Je ne suis pas amoureux, je la trouve simplement sympathique. | J’ai pas de crush, je la trouve juste sympa. |
+| Le problème vient de ma connexion, pas de mon niveau. | C’est la co, pas un skill issue. |
+| Je ne vais pas prétexter un accident, j’ai choisi de le faire. | Je vais pas sortir « j’ai glissé chef », j’ai choisi de le faire. |
+
+Quoicoubeh et feur figurent dans des phrases qui explicitent le jeu de mots ; aucune règle `quoi → quoicoubeh` n’est introduite. Skibidi est cité comme référence absurde, pas associé à une fausse définition stable. Les termes de détresse figurée ne sont pas des diagnostics. Une déconnexion ne devient pas automatiquement un rage quit ; une amitié ne devient pas automatiquement un crush.
+
+## Origine, droits et limites éditoriales
+
+Les exemples sont rédigés par l’agent pour ce projet, sans collecte de conversations réelles, messages privés ou publications personnelles. Les noms des exemples sont fictifs. Les références culturelles ne sont pas des créations du projet. Le texte original des exemples est proposé sous CC0-1.0 dans la mesure des droits applicables ; cette indication ne revendique aucun droit sur des œuvres, personnages, marques ou références préexistantes.
+
+Les sources de contexte sont documentées dans [SOURCES.md](SOURCES.md). Elles servent à comprendre certains usages, pas de corpus copié. Aucune représentativité du langage des jeunes en 2026 n’est revendiquée : les références couvrent plusieurs périodes et des usages différents.
+
+**Aucune relecture humaine n’a encore été effectuée.** `review_status` reste `pending_human_review`. La relecture éditoriale par l’agent et les contrôles automatiques ne garantissent pas la fidélité parfaite de chaque exemple. Il faut encore vérifier le naturel, la précision et les emplois ironiques avec des locuteurs.
+
+## Construction et séparation
+
+Entrées versionnées :
+
+- `seeds.txt` : 250 phrases de base conservées sans leurs anciens suffixes ;
+- `meme_seeds.txt` : 521 exemples contextualisés supplémentaires ;
+- `compositions.json` : 36 patrons avec 16 remplissages chacun, pour travailler aussi la composition ;
+- `references.tsv` : inventaire lexical et notes de sens.
+
+Après déduplication : 771 paires rédigées et 575 paires compositionnelles, 788 groupes. Les compositions ne sont pas présentées comme des situations indépendantes ; leur provenance les identifie. Les patrons mettent en jeu des actions, objets et contextes contrôlés. Ils ne remplacent pas un corpus naturel diversifié.
+
+Tous les exemples d’un patron restent dans une seule partition. On fusionne aussi les composantes dont un côté normalisé est identique ou atteint un ratio `SequenceMatcher >= 0.88`. La comparaison normalise NFC, casse, apostrophes et ponctuation ; les textes livrés gardent leur graphie. Un groupe ne traverse jamais deux partitions, même s’il couvre plusieurs thèmes.
+
+Le découpage déterministe utilise la graine 42 et une stratification par thème. On réserve environ 10 % des groupes à chaque ensemble de contrôle ; les groupes n’ont pas la même taille et ne sont jamais coupés. Les références lexicales présentes sont toutes représentées dans le train. Les références très rares sont donc gardées dans le train : ce test évalue de **nouveaux contextes**, pas la découverte de mots totalement inconnus.
+
+| Partition | Paires |
+| --- | ---: |
+| Train | 976 |
+| Validation | 201 |
+| Test | 169 |
+
+Les proportions en lignes diffèrent volontairement de 80/10/10 pour préserver les groupes entiers. Le plus grand groupe contient 34 lignes. Le regroupement reste heuristique : certaines paraphrases sémantiques peuvent lui échapper. Deux ambiguïtés de surface restantes sont des paraphrases compatibles, conservées dans un même groupe et comptées dans le rapport.
+
+La version du corpus a changé : les scores de la v1 et de la v2 ne sont pas directement comparables. Repartir de poids et d’un tokenizer neufs ; ne pas reprendre un ancien checkpoint avec `--resume`. Les anciennes évaluations sont historiques, pas un résultat sur ce corpus.
+
+## Contrôles reproductibles
 
 ```sh
-python3 scripts/prepare_dataset.py
-python3 -m unittest discover -s tests -p test_dataset.py -v
+uv run python scripts/prepare_dataset.py
+uv run python scripts/audit_dataset.py
+uv run pytest -q
 ```
 
-Le script utilise uniquement la bibliothèque standard. Depuis un autre dossier,
-utiliser son chemin absolu. `--output-dir /tmp/attention-data-check` permet de
-reconstruire ailleurs ; `--seed` vaut 42 par défaut. Le corpus est normalisé NFC,
-sans suppression des accents ou des majuscules. Tous les JSONL contiennent le
-même schéma : `id`, `standard`, `genz`, `group_id`, `topic`, `provenance`.
-`pairs.jsonl` est la collection complète ; `train.jsonl`, `validation.jsonl` et
-`test.jsonl` contiennent les partitions. `report.json` décrit les effectifs,
-thèmes, groupes, longueurs et l'empreinte SHA-256 du corpus.
+La préparation n’utilise que la bibliothèque standard. `--output-dir /tmp/attention-data-check` reconstruit les partitions ailleurs ; `--seed` permet de modifier la graine. Les contrôles vérifient schéma, provenance, identifiants, normalisation NFC, doublons normalisés, conservation des nombres écrits en chiffres, taille maximale de 500 caractères, couverture du corpus et absence de groupes partagés.
 
-Avant découpage, les noyaux dont un côté normalisé présente un ratio
-`difflib.SequenceMatcher >= 0.88` sont fusionnés par composantes connexes.
-La normalisation de comparaison applique NFC, minuscules, uniformisation des
-apostrophes et retrait de la ponctuation. Les quatre variantes de chaque noyau
-héritent du même groupe. Les groupes sont mélangés avec la graine 42 par thème,
-puis répartis environ 80/10/10. Un groupe couvrant plusieurs thèmes est affecté
-au premier thème pour la stratification et reste indivisible. L'arrondi des
-groupes explique les écarts aux proportions exactes. Aucune paire inverse n'est
-créée ici : le pipeline modèle la créera dans la partition de la paire originale.
+`audit_dataset.py` entraîne un BPE de 1 024 tokens sur le train uniquement et exerce le pipeline réel sur les trois ensembles. Aucun texte n’est tronqué. Les séquences livrées font au plus **33 tokens**, tokens de contrôle compris, pour une limite de 64. La restitution Unicode est vérifiée, accents et emojis compris. `tokenization_report.json` conserve les empreintes des fichiers audités. Ces longueurs dépendent du tokenizer choisi.
 
-Les contrôles vérifient schéma, provenance, identifiants, doublons de paires
-normalisées, textes identiques dans des groupes différents, longueur maximale
-500 points de code Unicode, couverture des partitions et étanchéité des groupes.
-Le regroupement lexical reste une heuristique : il ne détecte pas toutes les
-paraphrases sémantiques. Les suffixes de contexte sont volontairement partagés
-entre partitions ; les noyaux et leurs variantes proches sont regroupés, mais les
-tests ne mesurent pas la généralisation à de nouveaux patrons de contexte.
-La borne de tokens reste à mesurer avec le tokenizer appris sur le train.
+`report.json` donne les tailles, groupes, thèmes, modes de construction, couverture lexicale par partition, doublons, ambiguïtés de surface, conservation des chiffres et empreinte SHA-256. Une vérification numérique ne détecte ni toutes les erreurs d’entités ni une négation mal reformulée : ces aspects demandent une relecture sémantique.
 
-## Relecture et limites
+## Relecture et entraînement
 
-`review_sample.jsonl` fournit **50 paires du train**, cinq par thème, à relire
-manuellement dans les deux sens. Aucune relecture humaine n'a été effectuée.
-Les vérifications réalisées sont programmatiques et une inspection éditoriale
-par l'agent auteur ; elles ne prouvent pas la fidélité sémantique de chaque ligne.
-La relecture doit notamment vérifier intensité, négation et adéquation sociale de
-« seum », « chaud » ou « éclaté », dont le sens dépend du contexte. Le corpus
-contient surtout des phrases courtes au présent, peu de questions, de syntaxe
-complexe ou d'argot rare ; les suffixes répétitifs favorisent la mémorisation.
+`review_sample.jsonl` propose **100 paires du train**, avec couverture des thèmes et de l’inventaire lexical. Vérifier les deux directions : sens conservé, français standard naturel, registre Internet plausible, absence de fait inventé, préservation des noms/nombres/négations et intensité. Corriger les fichiers d’entrée, reconstruire et versionner toute modification. Ne pas utiliser le test pour choisir les corrections ou les hyperparamètres.
 
-Utiliser la validation pour les réglages. Garder le test pour l'évaluation finale,
-sans l'utiliser pour sélectionner le checkpoint. Après relecture du train, toute
-correction des noyaux nécessite une reconstruction et un nouveau rapport ;
-consigner les changements avant de comparer les expériences.
+La présence de plus de références ne garantit pas un bon modèle. Le corpus reste petit, synthétique, déséquilibré et partiellement composé ; certaines expressions restent rares. Il faudra des exemples indépendants relus, davantage de paraphrases et une évaluation humaine pour obtenir une traduction robuste. Les sorties inventées par le modèle ne deviennent jamais automatiquement de nouvelles références d’apprentissage.

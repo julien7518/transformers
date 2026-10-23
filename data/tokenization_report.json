@@ -1,0 +1,33 @@
+{
+  "vocab_size_requested": 1024,
+  "vocab_size_actual": 1024,
+  "max_length": 64,
+  "tokenizer_trained_on": "train only",
+  "special_tokens_counted": 2,
+  "splits": {
+    "train": {
+      "pairs": 976,
+      "max_tokens_with_control_tokens": 33,
+      "p95_tokens": 24,
+      "overflow": 0,
+      "unicode_roundtrip": true,
+      "sha256": "c49ca7dd349582d059565da5101aaa069f51dd81c16c18e68aa19f897091ad63"
+    },
+    "validation": {
+      "pairs": 201,
+      "max_tokens_with_control_tokens": 30,
+      "p95_tokens": 24,
+      "overflow": 0,
+      "unicode_roundtrip": true,
+      "sha256": "f3f48fe6a5655947f6d74fb6133deb453d6211ed68e4253df3ef72fefe7967f0"
+    },
+    "test": {
+      "pairs": 169,
+      "max_tokens_with_control_tokens": 31,
+      "p95_tokens": 26,
+      "overflow": 0,
+      "unicode_roundtrip": true,
+      "sha256": "c1f9a2b03fd841e8bc8e5e7908c97f6bba23166dc977723c72db35fdcdba5c3d"
+    }
+  }
+}

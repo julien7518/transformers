@@ -27,17 +27,47 @@ class DatasetTests(unittest.TestCase):
         dataset.validate_splits(self.rows, self.splits)
         self.assertGreaterEqual(len(self.rows), 1000)
         self.assertGreaterEqual(len({r["topic"] for r in self.rows}), 8)
-        seeds = dataset.load_seeds(ROOT / "data/seeds.txt")
-        self.assertEqual(dataset.build_pairs(seeds), self.rows)
+        seeds, families, constructions = dataset.load_inputs()
+        self.assertEqual(dataset.build_pairs(seeds, families, constructions), self.rows)
         self.assertEqual(dataset.split_pairs(self.rows, 42), self.splits)
         for part in self.splits.values():
             self.assertEqual(
                 {r["topic"] for r in part}, {r["topic"] for r in self.rows}
             )
 
+    def test_references_are_represented_in_training(self):
+        all_tags = {tag for row in self.rows for tag in row["reference_tags"]}
+        train_tags = {tag for row in self.splits["train"] for tag in row["reference_tags"]}
+        self.assertEqual(all_tags, train_tags)
+        self.assertGreaterEqual(len(all_tags), 80)
+
+    def test_whole_composition_frames_stay_together(self):
+        seeds, families, _ = dataset.load_inputs()
+        owner = {r["id"]: name for name, rows in self.splits.items() for r in rows}
+        by_pair = {(dataset.canonical(r["standard"]), dataset.canonical(r["genz"])): owner[r["id"]] for r in self.rows}
+        frame_splits = {}
+        for (_, standard, genz), family in zip(seeds, families):
+            if family.startswith("pattern-"):
+                frame_splits.setdefault(family, set()).add(by_pair[(dataset.canonical(standard), dataset.canonical(genz))])
+        self.assertEqual(len(frame_splits), 36)
+        self.assertTrue(all(len(names) == 1 for names in frame_splits.values()))
+
+    def test_no_universal_suffix_expansion(self):
+        self.assertGreaterEqual(sum(r["construction"] == "authored" for r in self.rows), 700)
+        self.assertFalse(any(r["standard"].endswith(" Je voulais te le dire.") for r in self.rows))
+        self.assertTrue(all(r["review_status"] == "pending_human_review" for r in self.rows))
+
+    def test_preserves_numeric_literals(self):
+        row = copy.deepcopy(self.rows[0])
+        row["standard"], row["genz"] = "Rendez-vous à 14 h.", "On se capte à 15 h."
+        with self.assertRaisesRegex(ValueError, "Numeric literals"):
+            dataset.validate_pairs([row])
+
     def test_detects_leakage(self):
         splits = copy.deepcopy(self.splits)
-        row = splits["train"].pop(0)
+        counts = dataset.Counter(r["group_id"] for r in splits["train"])
+        index = next(i for i, r in enumerate(splits["train"]) if counts[r["group_id"]] > 1)
+        row = splits["train"].pop(index)
         splits["test"].append(row)
         with self.assertRaisesRegex(ValueError, "Group leakage"):
             dataset.validate_splits(self.rows, splits)
@@ -63,8 +93,10 @@ class DatasetTests(unittest.TestCase):
 
     def test_review_sample_is_training_only(self):
         review = dataset.read_jsonl(ROOT / "data/review_sample.jsonl")
-        self.assertEqual(len(review), 50)
-        self.assertEqual(len({r["id"] for r in review}), 50)
+        self.assertEqual(len(review), 100)
+        self.assertEqual(len({r["id"] for r in review}), 100)
+        self.assertEqual({r["topic"] for r in review}, {r["topic"] for r in self.rows})
+        self.assertEqual({tag for r in review for tag in r["reference_tags"]}, {tag for r in self.rows for tag in r["reference_tags"]})
         self.assertTrue(
             {r["id"] for r in review} <= {r["id"] for r in self.splits["train"]}
         )

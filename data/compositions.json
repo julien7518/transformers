@@ -1,0 +1,2597 @@
+{
+  "description": "Exemples compositionnels contrôlés ; chaque patron reste dans une seule partition. Pas de suffixe de remplissage universel. Les sujets fictifs sont conservés.",
+  "frames": [
+    {
+      "id": "pattern-01",
+      "topic": "avis_composes",
+      "standard": "Je trouve {x} excellent.",
+      "genz": "{x}, c’est une dinguerie.",
+      "slots": [
+        {
+          "standard": "ce film",
+          "genz": "Ce film"
+        },
+        {
+          "standard": "cet album",
+          "genz": "Cet album"
+        },
+        {
+          "standard": "ce concert",
+          "genz": "Ce concert"
+        },
+        {
+          "standard": "cet épisode",
+          "genz": "Cet épisode"
+        },
+        {
+          "standard": "ce spectacle",
+          "genz": "Ce spectacle"
+        },
+        {
+          "standard": "ce match",
+          "genz": "Ce match"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "ce jeu",
+          "genz": "Ce jeu"
+        },
+        {
+          "standard": "ce roman",
+          "genz": "Ce roman"
+        },
+        {
+          "standard": "ce dessert",
+          "genz": "Ce dessert"
+        },
+        {
+          "standard": "ce plat",
+          "genz": "Ce plat"
+        },
+        {
+          "standard": "ce remix",
+          "genz": "Ce remix"
+        },
+        {
+          "standard": "ce morceau",
+          "genz": "Ce morceau"
+        },
+        {
+          "standard": "ce clip",
+          "genz": "Ce clip"
+        },
+        {
+          "standard": "ce court-métrage",
+          "genz": "Ce court-métrage"
+        }
+      ]
+    },
+    {
+      "id": "pattern-02",
+      "topic": "avis_composes",
+      "standard": "Je ne trouve pas {x} aussi bon que tout le monde le dit.",
+      "genz": "{x}, c’est surcoté.",
+      "slots": [
+        {
+          "standard": "ce film",
+          "genz": "Ce film"
+        },
+        {
+          "standard": "cet album",
+          "genz": "Cet album"
+        },
+        {
+          "standard": "ce concert",
+          "genz": "Ce concert"
+        },
+        {
+          "standard": "cet épisode",
+          "genz": "Cet épisode"
+        },
+        {
+          "standard": "ce spectacle",
+          "genz": "Ce spectacle"
+        },
+        {
+          "standard": "ce match",
+          "genz": "Ce match"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "ce jeu",
+          "genz": "Ce jeu"
+        },
+        {
+          "standard": "ce roman",
+          "genz": "Ce roman"
+        },
+        {
+          "standard": "ce dessert",
+          "genz": "Ce dessert"
+        },
+        {
+          "standard": "ce plat",
+          "genz": "Ce plat"
+        },
+        {
+          "standard": "ce remix",
+          "genz": "Ce remix"
+        },
+        {
+          "standard": "ce morceau",
+          "genz": "Ce morceau"
+        },
+        {
+          "standard": "ce clip",
+          "genz": "Ce clip"
+        },
+        {
+          "standard": "ce court-métrage",
+          "genz": "Ce court-métrage"
+        }
+      ]
+    },
+    {
+      "id": "pattern-03",
+      "topic": "avis_composes",
+      "standard": "{x} mérite plus de reconnaissance.",
+      "genz": "{x}, c’est sous-coté.",
+      "slots": [
+        {
+          "standard": "Ce film",
+          "genz": "Ce film"
+        },
+        {
+          "standard": "Cet album",
+          "genz": "Cet album"
+        },
+        {
+          "standard": "Ce concert",
+          "genz": "Ce concert"
+        },
+        {
+          "standard": "Cet épisode",
+          "genz": "Cet épisode"
+        },
+        {
+          "standard": "Ce spectacle",
+          "genz": "Ce spectacle"
+        },
+        {
+          "standard": "Ce match",
+          "genz": "Ce match"
+        },
+        {
+          "standard": "Ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "Ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "Ce jeu",
+          "genz": "Ce jeu"
+        },
+        {
+          "standard": "Ce roman",
+          "genz": "Ce roman"
+        },
+        {
+          "standard": "Ce dessert",
+          "genz": "Ce dessert"
+        },
+        {
+          "standard": "Ce plat",
+          "genz": "Ce plat"
+        },
+        {
+          "standard": "Ce remix",
+          "genz": "Ce remix"
+        },
+        {
+          "standard": "Ce morceau",
+          "genz": "Ce morceau"
+        },
+        {
+          "standard": "Ce clip",
+          "genz": "Ce clip"
+        },
+        {
+          "standard": "Ce court-métrage",
+          "genz": "Ce court-métrage"
+        }
+      ]
+    },
+    {
+      "id": "pattern-04",
+      "topic": "avis_composes",
+      "standard": "Pourquoi trouves-tu {x} si mauvais ?",
+      "genz": "Pourquoi tu trouves {x} aussi éclaté ?",
+      "slots": [
+        {
+          "standard": "ce film",
+          "genz": "ce film"
+        },
+        {
+          "standard": "cet album",
+          "genz": "cet album"
+        },
+        {
+          "standard": "ce concert",
+          "genz": "ce concert"
+        },
+        {
+          "standard": "cet épisode",
+          "genz": "cet épisode"
+        },
+        {
+          "standard": "ce spectacle",
+          "genz": "ce spectacle"
+        },
+        {
+          "standard": "ce match",
+          "genz": "ce match"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "ce dessin"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "ce montage"
+        },
+        {
+          "standard": "ce jeu",
+          "genz": "ce jeu"
+        },
+        {
+          "standard": "ce roman",
+          "genz": "ce roman"
+        },
+        {
+          "standard": "ce dessert",
+          "genz": "ce dessert"
+        },
+        {
+          "standard": "ce plat",
+          "genz": "ce plat"
+        },
+        {
+          "standard": "ce remix",
+          "genz": "ce remix"
+        },
+        {
+          "standard": "ce morceau",
+          "genz": "ce morceau"
+        },
+        {
+          "standard": "ce clip",
+          "genz": "ce clip"
+        },
+        {
+          "standard": "ce court-métrage",
+          "genz": "ce court-métrage"
+        }
+      ]
+    },
+    {
+      "id": "pattern-05",
+      "topic": "avis_composes",
+      "standard": "Je ne suis pas impatient de découvrir {x}.",
+      "genz": "Je suis pas hypé pour {x}.",
+      "slots": [
+        {
+          "standard": "ce film",
+          "genz": "ce film"
+        },
+        {
+          "standard": "cet album",
+          "genz": "cet album"
+        },
+        {
+          "standard": "ce concert",
+          "genz": "ce concert"
+        },
+        {
+          "standard": "cet épisode",
+          "genz": "cet épisode"
+        },
+        {
+          "standard": "ce spectacle",
+          "genz": "ce spectacle"
+        },
+        {
+          "standard": "ce match",
+          "genz": "ce match"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "ce dessin"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "ce montage"
+        },
+        {
+          "standard": "ce jeu",
+          "genz": "ce jeu"
+        },
+        {
+          "standard": "ce roman",
+          "genz": "ce roman"
+        },
+        {
+          "standard": "ce dessert",
+          "genz": "ce dessert"
+        },
+        {
+          "standard": "ce plat",
+          "genz": "ce plat"
+        },
+        {
+          "standard": "ce remix",
+          "genz": "ce remix"
+        },
+        {
+          "standard": "ce morceau",
+          "genz": "ce morceau"
+        },
+        {
+          "standard": "ce clip",
+          "genz": "ce clip"
+        },
+        {
+          "standard": "ce court-métrage",
+          "genz": "ce court-métrage"
+        }
+      ]
+    },
+    {
+      "id": "pattern-06",
+      "topic": "avis_composes",
+      "standard": "Ne me révèle pas la fin de {x}.",
+      "genz": "Me spoile pas la fin de {x}.",
+      "slots": [
+        {
+          "standard": "ce film",
+          "genz": "ce film"
+        },
+        {
+          "standard": "cet épisode",
+          "genz": "cet épisode"
+        },
+        {
+          "standard": "cette série",
+          "genz": "cette série"
+        },
+        {
+          "standard": "ce roman",
+          "genz": "ce roman"
+        },
+        {
+          "standard": "ce jeu",
+          "genz": "ce jeu"
+        },
+        {
+          "standard": "cette histoire",
+          "genz": "cette histoire"
+        },
+        {
+          "standard": "cette saison",
+          "genz": "cette saison"
+        },
+        {
+          "standard": "cette trilogie",
+          "genz": "cette trilogie"
+        },
+        {
+          "standard": "ce manga",
+          "genz": "ce manga"
+        },
+        {
+          "standard": "cette bande dessinée",
+          "genz": "cette BD"
+        },
+        {
+          "standard": "ce feuilleton",
+          "genz": "ce feuilleton"
+        },
+        {
+          "standard": "ce dessin animé",
+          "genz": "ce dessin animé"
+        },
+        {
+          "standard": "ce court-métrage",
+          "genz": "ce court-métrage"
+        },
+        {
+          "standard": "ce récit",
+          "genz": "ce récit"
+        },
+        {
+          "standard": "cette aventure",
+          "genz": "cette aventure"
+        },
+        {
+          "standard": "cette émission",
+          "genz": "cette émission"
+        }
+      ]
+    },
+    {
+      "id": "pattern-07",
+      "topic": "quotidien_compose",
+      "standard": "Je n’ai vraiment pas envie de {x}.",
+      "genz": "J’ai trop la flemme de {x}.",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-08",
+      "topic": "quotidien_compose",
+      "standard": "Je vais me concentrer sérieusement pour {x}.",
+      "genz": "Je vais me lock in pour {x}.",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-09",
+      "topic": "quotidien_compose",
+      "standard": "Je n’ai plus assez d’énergie pour {x}.",
+      "genz": "Je suis trop KO pour {x}.",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-10",
+      "topic": "quotidien_compose",
+      "standard": "Peux-tu m’aider à {x} ?",
+      "genz": "Tu peux me filer un coup de main pour {x} ?",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-11",
+      "topic": "quotidien_compose",
+      "standard": "Je n’ai pas oublié de {x}.",
+      "genz": "J’ai pas zappé de {x}.",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-12",
+      "topic": "quotidien_compose",
+      "standard": "Je dois me dépêcher pour {x}.",
+      "genz": "Faut que je me speed pour {x}.",
+      "slots": [
+        {
+          "standard": "finir ce devoir",
+          "genz": "finir ce devoir"
+        },
+        {
+          "standard": "ranger ma chambre",
+          "genz": "ranger ma chambre"
+        },
+        {
+          "standard": "lire ce chapitre",
+          "genz": "lire ce chapitre"
+        },
+        {
+          "standard": "écrire ce rapport",
+          "genz": "écrire ce rapport"
+        },
+        {
+          "standard": "répondre à ces messages",
+          "genz": "répondre à ces messages"
+        },
+        {
+          "standard": "préparer ce repas",
+          "genz": "préparer ce repas"
+        },
+        {
+          "standard": "finir cette quête",
+          "genz": "finir cette quête"
+        },
+        {
+          "standard": "revoir cette présentation",
+          "genz": "revoir cette présentation"
+        },
+        {
+          "standard": "organiser cette sortie",
+          "genz": "organiser cette sortie"
+        },
+        {
+          "standard": "nettoyer la cuisine",
+          "genz": "nettoyer la cuisine"
+        },
+        {
+          "standard": "faire les courses",
+          "genz": "faire les courses"
+        },
+        {
+          "standard": "remplir ce formulaire",
+          "genz": "remplir ce formulaire"
+        },
+        {
+          "standard": "préparer mon sac",
+          "genz": "préparer mon sac"
+        },
+        {
+          "standard": "réviser ce cours",
+          "genz": "réviser ce cours"
+        },
+        {
+          "standard": "envoyer ce courriel",
+          "genz": "envoyer ce mail"
+        },
+        {
+          "standard": "corriger ce programme",
+          "genz": "corriger ce code"
+        }
+      ]
+    },
+    {
+      "id": "pattern-13",
+      "topic": "relations_composees",
+      "standard": "{x} a lu mon message sans répondre.",
+      "genz": "{x} m’a laissé en vu.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-14",
+      "topic": "relations_composees",
+      "standard": "{x} a cessé de répondre sans explication.",
+      "genz": "{x} m’a ghosté.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-15",
+      "topic": "relations_composees",
+      "standard": "{x} a sauvé la partie au dernier moment.",
+      "genz": "{x} a clutch la game.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-16",
+      "topic": "relations_composees",
+      "standard": "{x} se vante de sa nouvelle tenue.",
+      "genz": "{x} flex son nouveau fit.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-17",
+      "topic": "relations_composees",
+      "standard": "{x} comprend la référence, mais ne la trouve pas drôle.",
+      "genz": "{x} a la ref, mais trouve pas ça drôle.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-18",
+      "topic": "relations_composees",
+      "standard": "{x} ne cherche pas à provoquer, c’est une vraie question.",
+      "genz": "{x} troll pas, c’est une vraie question.",
+      "slots": [
+        {
+          "standard": "Lina",
+          "genz": "Lina"
+        },
+        {
+          "standard": "Samir",
+          "genz": "Samir"
+        },
+        {
+          "standard": "Camille",
+          "genz": "Camille"
+        },
+        {
+          "standard": "Alex",
+          "genz": "Alex"
+        },
+        {
+          "standard": "Nour",
+          "genz": "Nour"
+        },
+        {
+          "standard": "Maxime",
+          "genz": "Maxime"
+        },
+        {
+          "standard": "Charlie",
+          "genz": "Charlie"
+        },
+        {
+          "standard": "Lou",
+          "genz": "Lou"
+        },
+        {
+          "standard": "Noa",
+          "genz": "Noa"
+        },
+        {
+          "standard": "Sasha",
+          "genz": "Sasha"
+        },
+        {
+          "standard": "Mon voisin",
+          "genz": "Mon voisin"
+        },
+        {
+          "standard": "Ma voisine",
+          "genz": "Ma voisine"
+        },
+        {
+          "standard": "Mon frère",
+          "genz": "Mon frère"
+        },
+        {
+          "standard": "Ma sœur",
+          "genz": "Ma sœur"
+        },
+        {
+          "standard": "Mon collègue",
+          "genz": "Mon collègue"
+        },
+        {
+          "standard": "Ma collègue",
+          "genz": "Ma collègue"
+        }
+      ]
+    },
+    {
+      "id": "pattern-19",
+      "topic": "etudes_composees",
+      "standard": "Je ne comprends absolument rien à {x}.",
+      "genz": "Je capte rien à {x}.",
+      "slots": [
+        {
+          "standard": "ce devoir",
+          "genz": "ce devoir"
+        },
+        {
+          "standard": "cet examen",
+          "genz": "cet exam"
+        },
+        {
+          "standard": "cet exercice",
+          "genz": "cet exo"
+        },
+        {
+          "standard": "ce problème",
+          "genz": "ce problème"
+        },
+        {
+          "standard": "ce projet",
+          "genz": "ce projet"
+        },
+        {
+          "standard": "ce dossier",
+          "genz": "ce dossier"
+        },
+        {
+          "standard": "ce rapport",
+          "genz": "ce rapport"
+        },
+        {
+          "standard": "cet entretien",
+          "genz": "cet entretien"
+        },
+        {
+          "standard": "ce défi",
+          "genz": "ce défi"
+        },
+        {
+          "standard": "ce formulaire",
+          "genz": "ce formulaire"
+        },
+        {
+          "standard": "ce niveau",
+          "genz": "ce niveau"
+        },
+        {
+          "standard": "ce contrôle",
+          "genz": "ce contrôle"
+        },
+        {
+          "standard": "ce calcul",
+          "genz": "ce calcul"
+        },
+        {
+          "standard": "ce texte",
+          "genz": "ce texte"
+        },
+        {
+          "standard": "ce programme",
+          "genz": "ce code"
+        },
+        {
+          "standard": "ce chapitre",
+          "genz": "ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-20",
+      "topic": "etudes_composees",
+      "standard": "{x} me met dans un état de stress intense.",
+      "genz": "{x} me met en PLS.",
+      "slots": [
+        {
+          "standard": "Ce devoir",
+          "genz": "Ce devoir"
+        },
+        {
+          "standard": "Cet examen",
+          "genz": "Cet exam"
+        },
+        {
+          "standard": "Cet exercice",
+          "genz": "Cet exo"
+        },
+        {
+          "standard": "Ce problème",
+          "genz": "Ce problème"
+        },
+        {
+          "standard": "Ce projet",
+          "genz": "Ce projet"
+        },
+        {
+          "standard": "Ce dossier",
+          "genz": "Ce dossier"
+        },
+        {
+          "standard": "Ce rapport",
+          "genz": "Ce rapport"
+        },
+        {
+          "standard": "Cet entretien",
+          "genz": "Cet entretien"
+        },
+        {
+          "standard": "Ce défi",
+          "genz": "Ce défi"
+        },
+        {
+          "standard": "Ce formulaire",
+          "genz": "Ce formulaire"
+        },
+        {
+          "standard": "Ce niveau",
+          "genz": "Ce niveau"
+        },
+        {
+          "standard": "Ce contrôle",
+          "genz": "Ce contrôle"
+        },
+        {
+          "standard": "Ce calcul",
+          "genz": "Ce calcul"
+        },
+        {
+          "standard": "Ce texte",
+          "genz": "Ce texte"
+        },
+        {
+          "standard": "Ce programme",
+          "genz": "Ce code"
+        },
+        {
+          "standard": "Ce chapitre",
+          "genz": "Ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-21",
+      "topic": "etudes_composees",
+      "standard": "{x} est plus difficile que tout le reste.",
+      "genz": "{x}, c’est le boss final.",
+      "slots": [
+        {
+          "standard": "Ce devoir",
+          "genz": "Ce devoir"
+        },
+        {
+          "standard": "Cet examen",
+          "genz": "Cet exam"
+        },
+        {
+          "standard": "Cet exercice",
+          "genz": "Cet exo"
+        },
+        {
+          "standard": "Ce problème",
+          "genz": "Ce problème"
+        },
+        {
+          "standard": "Ce projet",
+          "genz": "Ce projet"
+        },
+        {
+          "standard": "Ce dossier",
+          "genz": "Ce dossier"
+        },
+        {
+          "standard": "Ce rapport",
+          "genz": "Ce rapport"
+        },
+        {
+          "standard": "Cet entretien",
+          "genz": "Cet entretien"
+        },
+        {
+          "standard": "Ce défi",
+          "genz": "Ce défi"
+        },
+        {
+          "standard": "Ce formulaire",
+          "genz": "Ce formulaire"
+        },
+        {
+          "standard": "Ce niveau",
+          "genz": "Ce niveau"
+        },
+        {
+          "standard": "Ce contrôle",
+          "genz": "Ce contrôle"
+        },
+        {
+          "standard": "Ce calcul",
+          "genz": "Ce calcul"
+        },
+        {
+          "standard": "Ce texte",
+          "genz": "Ce texte"
+        },
+        {
+          "standard": "Ce programme",
+          "genz": "Ce code"
+        },
+        {
+          "standard": "Ce chapitre",
+          "genz": "Ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-22",
+      "topic": "etudes_composees",
+      "standard": "Je dois vérifier {x} avant demain.",
+      "genz": "Faut que je check {x} avant demain.",
+      "slots": [
+        {
+          "standard": "ce devoir",
+          "genz": "ce devoir"
+        },
+        {
+          "standard": "cet examen",
+          "genz": "cet exam"
+        },
+        {
+          "standard": "cet exercice",
+          "genz": "cet exo"
+        },
+        {
+          "standard": "ce problème",
+          "genz": "ce problème"
+        },
+        {
+          "standard": "ce projet",
+          "genz": "ce projet"
+        },
+        {
+          "standard": "ce dossier",
+          "genz": "ce dossier"
+        },
+        {
+          "standard": "ce rapport",
+          "genz": "ce rapport"
+        },
+        {
+          "standard": "cet entretien",
+          "genz": "cet entretien"
+        },
+        {
+          "standard": "ce défi",
+          "genz": "ce défi"
+        },
+        {
+          "standard": "ce formulaire",
+          "genz": "ce formulaire"
+        },
+        {
+          "standard": "ce niveau",
+          "genz": "ce niveau"
+        },
+        {
+          "standard": "ce contrôle",
+          "genz": "ce contrôle"
+        },
+        {
+          "standard": "ce calcul",
+          "genz": "ce calcul"
+        },
+        {
+          "standard": "ce texte",
+          "genz": "ce texte"
+        },
+        {
+          "standard": "ce programme",
+          "genz": "ce code"
+        },
+        {
+          "standard": "ce chapitre",
+          "genz": "ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-23",
+      "topic": "etudes_composees",
+      "standard": "Ne te décourage pas, {x} est difficile mais faisable.",
+      "genz": "Lâche pas, {x} est chaud mais faisable.",
+      "slots": [
+        {
+          "standard": "ce devoir",
+          "genz": "ce devoir"
+        },
+        {
+          "standard": "cet examen",
+          "genz": "cet exam"
+        },
+        {
+          "standard": "cet exercice",
+          "genz": "cet exo"
+        },
+        {
+          "standard": "ce problème",
+          "genz": "ce problème"
+        },
+        {
+          "standard": "ce projet",
+          "genz": "ce projet"
+        },
+        {
+          "standard": "ce dossier",
+          "genz": "ce dossier"
+        },
+        {
+          "standard": "ce rapport",
+          "genz": "ce rapport"
+        },
+        {
+          "standard": "cet entretien",
+          "genz": "cet entretien"
+        },
+        {
+          "standard": "ce défi",
+          "genz": "ce défi"
+        },
+        {
+          "standard": "ce formulaire",
+          "genz": "ce formulaire"
+        },
+        {
+          "standard": "ce niveau",
+          "genz": "ce niveau"
+        },
+        {
+          "standard": "ce contrôle",
+          "genz": "ce contrôle"
+        },
+        {
+          "standard": "ce calcul",
+          "genz": "ce calcul"
+        },
+        {
+          "standard": "ce texte",
+          "genz": "ce texte"
+        },
+        {
+          "standard": "ce programme",
+          "genz": "ce code"
+        },
+        {
+          "standard": "ce chapitre",
+          "genz": "ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-24",
+      "topic": "etudes_composees",
+      "standard": "Je n’ai pas terminé {x}, mais je peux encore y arriver.",
+      "genz": "J’ai pas fini {x}, mais je suis pas encore cuit.",
+      "slots": [
+        {
+          "standard": "ce devoir",
+          "genz": "ce devoir"
+        },
+        {
+          "standard": "cet examen",
+          "genz": "cet exam"
+        },
+        {
+          "standard": "cet exercice",
+          "genz": "cet exo"
+        },
+        {
+          "standard": "ce problème",
+          "genz": "ce problème"
+        },
+        {
+          "standard": "ce projet",
+          "genz": "ce projet"
+        },
+        {
+          "standard": "ce dossier",
+          "genz": "ce dossier"
+        },
+        {
+          "standard": "ce rapport",
+          "genz": "ce rapport"
+        },
+        {
+          "standard": "cet entretien",
+          "genz": "cet entretien"
+        },
+        {
+          "standard": "ce défi",
+          "genz": "ce défi"
+        },
+        {
+          "standard": "ce formulaire",
+          "genz": "ce formulaire"
+        },
+        {
+          "standard": "ce niveau",
+          "genz": "ce niveau"
+        },
+        {
+          "standard": "ce contrôle",
+          "genz": "ce contrôle"
+        },
+        {
+          "standard": "ce calcul",
+          "genz": "ce calcul"
+        },
+        {
+          "standard": "ce texte",
+          "genz": "ce texte"
+        },
+        {
+          "standard": "ce programme",
+          "genz": "ce code"
+        },
+        {
+          "standard": "ce chapitre",
+          "genz": "ce chapitre"
+        }
+      ]
+    },
+    {
+      "id": "pattern-25",
+      "topic": "reactions_composees",
+      "standard": "{x} me fait beaucoup rire.",
+      "genz": "{x} me termine.",
+      "slots": [
+        {
+          "standard": "Ce message",
+          "genz": "Ce message"
+        },
+        {
+          "standard": "Ce commentaire",
+          "genz": "Ce commentaire"
+        },
+        {
+          "standard": "Cette photo",
+          "genz": "Cette photo"
+        },
+        {
+          "standard": "Cette vidéo",
+          "genz": "Cette vidéo"
+        },
+        {
+          "standard": "Cette blague",
+          "genz": "Cette vanne"
+        },
+        {
+          "standard": "Cette réponse",
+          "genz": "Cette réponse"
+        },
+        {
+          "standard": "Ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "Cette imitation",
+          "genz": "Cette imitation"
+        },
+        {
+          "standard": "Cette scène",
+          "genz": "Cette scène"
+        },
+        {
+          "standard": "Ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "Ce dialogue",
+          "genz": "Ce dialogue"
+        },
+        {
+          "standard": "Cette anecdote",
+          "genz": "Cette anecdote"
+        },
+        {
+          "standard": "Ce mème",
+          "genz": "Ce mème"
+        },
+        {
+          "standard": "Cette affiche",
+          "genz": "Cette affiche"
+        },
+        {
+          "standard": "Cette parodie",
+          "genz": "Cette parodie"
+        },
+        {
+          "standard": "Ce sketch",
+          "genz": "Ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-26",
+      "topic": "reactions_composees",
+      "standard": "Je ne comprends pas la référence dans {x}.",
+      "genz": "J’ai pas la ref dans {x}.",
+      "slots": [
+        {
+          "standard": "ce message",
+          "genz": "ce message"
+        },
+        {
+          "standard": "ce commentaire",
+          "genz": "ce commentaire"
+        },
+        {
+          "standard": "cette photo",
+          "genz": "cette photo"
+        },
+        {
+          "standard": "cette vidéo",
+          "genz": "cette vidéo"
+        },
+        {
+          "standard": "cette blague",
+          "genz": "cette vanne"
+        },
+        {
+          "standard": "cette réponse",
+          "genz": "cette réponse"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "ce montage"
+        },
+        {
+          "standard": "cette imitation",
+          "genz": "cette imitation"
+        },
+        {
+          "standard": "cette scène",
+          "genz": "cette scène"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "ce dessin"
+        },
+        {
+          "standard": "ce dialogue",
+          "genz": "ce dialogue"
+        },
+        {
+          "standard": "cette anecdote",
+          "genz": "cette anecdote"
+        },
+        {
+          "standard": "ce mème",
+          "genz": "ce mème"
+        },
+        {
+          "standard": "cette affiche",
+          "genz": "cette affiche"
+        },
+        {
+          "standard": "cette parodie",
+          "genz": "cette parodie"
+        },
+        {
+          "standard": "ce sketch",
+          "genz": "ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-27",
+      "topic": "reactions_composees",
+      "standard": "{x} me met mal à l’aise.",
+      "genz": "{x}, c’est trop cringe.",
+      "slots": [
+        {
+          "standard": "Ce message",
+          "genz": "Ce message"
+        },
+        {
+          "standard": "Ce commentaire",
+          "genz": "Ce commentaire"
+        },
+        {
+          "standard": "Cette photo",
+          "genz": "Cette photo"
+        },
+        {
+          "standard": "Cette vidéo",
+          "genz": "Cette vidéo"
+        },
+        {
+          "standard": "Cette blague",
+          "genz": "Cette vanne"
+        },
+        {
+          "standard": "Cette réponse",
+          "genz": "Cette réponse"
+        },
+        {
+          "standard": "Ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "Cette imitation",
+          "genz": "Cette imitation"
+        },
+        {
+          "standard": "Cette scène",
+          "genz": "Cette scène"
+        },
+        {
+          "standard": "Ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "Ce dialogue",
+          "genz": "Ce dialogue"
+        },
+        {
+          "standard": "Cette anecdote",
+          "genz": "Cette anecdote"
+        },
+        {
+          "standard": "Ce mème",
+          "genz": "Ce mème"
+        },
+        {
+          "standard": "Cette affiche",
+          "genz": "Cette affiche"
+        },
+        {
+          "standard": "Cette parodie",
+          "genz": "Cette parodie"
+        },
+        {
+          "standard": "Ce sketch",
+          "genz": "Ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-28",
+      "topic": "reactions_composees",
+      "standard": "Je ne trouve pas {x} drôle.",
+      "genz": "{x}, ça me fait pas rire.",
+      "slots": [
+        {
+          "standard": "ce message",
+          "genz": "Ce message"
+        },
+        {
+          "standard": "ce commentaire",
+          "genz": "Ce commentaire"
+        },
+        {
+          "standard": "cette photo",
+          "genz": "Cette photo"
+        },
+        {
+          "standard": "cette vidéo",
+          "genz": "Cette vidéo"
+        },
+        {
+          "standard": "cette blague",
+          "genz": "Cette vanne"
+        },
+        {
+          "standard": "cette réponse",
+          "genz": "Cette réponse"
+        },
+        {
+          "standard": "ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "cette imitation",
+          "genz": "Cette imitation"
+        },
+        {
+          "standard": "cette scène",
+          "genz": "Cette scène"
+        },
+        {
+          "standard": "ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "ce dialogue",
+          "genz": "Ce dialogue"
+        },
+        {
+          "standard": "cette anecdote",
+          "genz": "Cette anecdote"
+        },
+        {
+          "standard": "ce mème",
+          "genz": "Ce mème"
+        },
+        {
+          "standard": "cette affiche",
+          "genz": "Cette affiche"
+        },
+        {
+          "standard": "cette parodie",
+          "genz": "Cette parodie"
+        },
+        {
+          "standard": "ce sketch",
+          "genz": "Ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-29",
+      "topic": "reactions_composees",
+      "standard": "{x} cherche seulement à provoquer de la colère.",
+      "genz": "{x}, c’est juste du rage bait.",
+      "slots": [
+        {
+          "standard": "Ce message",
+          "genz": "Ce message"
+        },
+        {
+          "standard": "Ce commentaire",
+          "genz": "Ce commentaire"
+        },
+        {
+          "standard": "Cette photo",
+          "genz": "Cette photo"
+        },
+        {
+          "standard": "Cette vidéo",
+          "genz": "Cette vidéo"
+        },
+        {
+          "standard": "Cette blague",
+          "genz": "Cette vanne"
+        },
+        {
+          "standard": "Cette réponse",
+          "genz": "Cette réponse"
+        },
+        {
+          "standard": "Ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "Cette imitation",
+          "genz": "Cette imitation"
+        },
+        {
+          "standard": "Cette scène",
+          "genz": "Cette scène"
+        },
+        {
+          "standard": "Ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "Ce dialogue",
+          "genz": "Ce dialogue"
+        },
+        {
+          "standard": "Cette anecdote",
+          "genz": "Cette anecdote"
+        },
+        {
+          "standard": "Ce mème",
+          "genz": "Ce mème"
+        },
+        {
+          "standard": "Cette affiche",
+          "genz": "Cette affiche"
+        },
+        {
+          "standard": "Cette parodie",
+          "genz": "Cette parodie"
+        },
+        {
+          "standard": "Ce sketch",
+          "genz": "Ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-30",
+      "topic": "reactions_composees",
+      "standard": "{x} est ironique, ne le prends pas au sérieux.",
+      "genz": "{x}, c’est du second degré, prends pas ça au sérieux.",
+      "slots": [
+        {
+          "standard": "Ce message",
+          "genz": "Ce message"
+        },
+        {
+          "standard": "Ce commentaire",
+          "genz": "Ce commentaire"
+        },
+        {
+          "standard": "Cette photo",
+          "genz": "Cette photo"
+        },
+        {
+          "standard": "Cette vidéo",
+          "genz": "Cette vidéo"
+        },
+        {
+          "standard": "Cette blague",
+          "genz": "Cette vanne"
+        },
+        {
+          "standard": "Cette réponse",
+          "genz": "Cette réponse"
+        },
+        {
+          "standard": "Ce montage",
+          "genz": "Ce montage"
+        },
+        {
+          "standard": "Cette imitation",
+          "genz": "Cette imitation"
+        },
+        {
+          "standard": "Cette scène",
+          "genz": "Cette scène"
+        },
+        {
+          "standard": "Ce dessin",
+          "genz": "Ce dessin"
+        },
+        {
+          "standard": "Ce dialogue",
+          "genz": "Ce dialogue"
+        },
+        {
+          "standard": "Cette anecdote",
+          "genz": "Cette anecdote"
+        },
+        {
+          "standard": "Ce mème",
+          "genz": "Ce mème"
+        },
+        {
+          "standard": "Cette affiche",
+          "genz": "Cette affiche"
+        },
+        {
+          "standard": "Cette parodie",
+          "genz": "Cette parodie"
+        },
+        {
+          "standard": "Ce sketch",
+          "genz": "Ce sketch"
+        }
+      ]
+    },
+    {
+      "id": "pattern-31",
+      "topic": "situations_composees",
+      "standard": "{x} Je suis vraiment contrarié.",
+      "genz": "{x} J’ai trop le seum.",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    },
+    {
+      "id": "pattern-32",
+      "topic": "situations_composees",
+      "standard": "{x} Ce n’est pas grave, je vais trouver une solution.",
+      "genz": "{x} C’est pas grave, je vais me débrouiller.",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    },
+    {
+      "id": "pattern-33",
+      "topic": "situations_composees",
+      "standard": "{x} Je fais semblant que tout va bien.",
+      "genz": "{x} Je suis en mode « this is fine ».",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    },
+    {
+      "id": "pattern-34",
+      "topic": "situations_composees",
+      "standard": "{x} Je n’en reviens pas.",
+      "genz": "{x} J’hallucine.",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    },
+    {
+      "id": "pattern-35",
+      "topic": "situations_composees",
+      "standard": "{x} Je préfère en rire.",
+      "genz": "{x} Je préfère en rigoler.",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    },
+    {
+      "id": "pattern-36",
+      "topic": "situations_composees",
+      "standard": "{x} Tu plaisantes ou c’est sérieux ?",
+      "genz": "{x} C’est du troll ou c’est premier degré ?",
+      "slots": [
+        {
+          "standard": "J’ai raté mon bus.",
+          "genz": "J’ai raté mon bus."
+        },
+        {
+          "standard": "J’ai oublié mes clés.",
+          "genz": "J’ai zappé mes clés."
+        },
+        {
+          "standard": "J’ai perdu mon portefeuille.",
+          "genz": "J’ai paumé mon portefeuille."
+        },
+        {
+          "standard": "J’ai cassé mon téléphone.",
+          "genz": "J’ai pété mon tel."
+        },
+        {
+          "standard": "Mon ordinateur a planté.",
+          "genz": "Mon PC a planté."
+        },
+        {
+          "standard": "La réunion est annulée.",
+          "genz": "La réunion est annulée."
+        },
+        {
+          "standard": "Il pleut depuis ce matin.",
+          "genz": "Il flotte depuis ce matin."
+        },
+        {
+          "standard": "Le train a une heure de retard.",
+          "genz": "Le train a une heure de retard."
+        },
+        {
+          "standard": "La connexion ne fonctionne plus.",
+          "genz": "La co marche plus."
+        },
+        {
+          "standard": "Le magasin est fermé.",
+          "genz": "Le magasin est fermé."
+        },
+        {
+          "standard": "J’ai renversé mon café.",
+          "genz": "J’ai renversé mon café."
+        },
+        {
+          "standard": "Le colis est arrivé abîmé.",
+          "genz": "Le colis est arrivé défoncé."
+        },
+        {
+          "standard": "Le concert est complet.",
+          "genz": "Le concert est complet."
+        },
+        {
+          "standard": "J’ai oublié mon chargeur.",
+          "genz": "J’ai zappé mon chargeur."
+        },
+        {
+          "standard": "Le réveil n’a pas sonné.",
+          "genz": "Le réveil a pas sonné."
+        },
+        {
+          "standard": "J’ai envoyé le mauvais fichier.",
+          "genz": "J’ai envoyé le mauvais fichier."
+        }
+      ]
+    }
+  ]
+}
